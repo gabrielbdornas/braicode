@@ -1,6 +1,6 @@
 # Contribute
 
-Welcome! I'm happy you'd like to contribute! This is an open project, and I value contributions from everyone.
+I'm glad you'd like to contribute! This is an open project, and I value contributions from everyone.
 
 GitHub is our code and issues hosting platform. To report a bug or propose a new feature, please open an [issue](https://github.com/gabrielbdornas/braicode/issues). For pull requests, I would ask you initially create an issue and then create a pull requests linked to this issue.
 
