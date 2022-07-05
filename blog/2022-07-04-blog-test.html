@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="It's a template document created automatically to introduce Livemark. We will list here core [Livemark](https://livemark.frictionlessdata.io/) features and you can play with theme live editing the document. It's possible to use any standard Markdown features as well.">
-<meta name="keywords" content="livemark,project">
-<link rel="icon" href="assets/favicon.ico">
-<title>Livemark Project</title>
+<meta name="description" content="We are very excited to announce that a new tool has been added to the Frictionless Data toolkit: Livemark. What is that? Livemark is a great tool that allows you to publish data articles very easily, giving you the possibility to see your data live on a working website in a blink of an eye.">
+<meta name="keywords" content="meet,livemark">
+<link rel="icon" href="../assets/favicon.ico">
+<title>Meet Livemark | Livemark Project</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1284,7 +1284,6 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 }
 
 </style>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 <style>
 
 #livemark-topics {
@@ -1796,7 +1795,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-brand">
   <ul>
     <li>
-      <a class="active" href=".">
+      <a class="active" href="..">
         Livemark Project
       </a>
     </li>
@@ -1805,23 +1804,23 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 
 <div id="livemark-pages">
   <ul class="primary">
-        <li class="primary  active">
-      <a href="index.html" class="primary">
+        <li class="primary  ">
+      <a href="../index.html" class="primary">
         Livemark Project
       </a>
           </li>
         <li class="primary  ">
-      <a href="pages/data.html" class="primary">
+      <a href="../pages/data.html" class="primary">
         Data Collection
       </a>
           </li>
         <li class="primary  ">
-      <a href="pages/contrib.html" class="primary">
+      <a href="../pages/contrib.html" class="primary">
         Contribute
       </a>
           </li>
         <li class="primary  ">
-      <a href="blog/index.html" class="primary">
+      <a href="index.html" class="primary">
         Blog
       </a>
           </li>
@@ -1836,462 +1835,34 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2022-07-04 21:28)
+  (2022-07-04 21:55)
 </div>
 
-<h1>Livemark Project</h1>
-<p><a href="https://github.com/frictionlessdata/livemark-project/actions"><img src="https://img.shields.io/github/workflow/status/frictionlessdata/livemark-project/general/main" alt="Build"></a>
-<a href="https://github.com/frictionlessdata/livemark-project"><img src="https://img.shields.io/badge/codebase-github-brightgreen" alt="Codebase"></a>
-<a href="https://discord.com/channels/695635777199145130/695635777199145133"><img src="https://img.shields.io/badge/support-discord-brightgreen" alt="Support"></a></p>
-<blockquote>
-<p>Edit <code>index.md</code> file to explore Livemark's features or just remove everything to start from a scratch.</p>
-</blockquote>
-<p>It's a template document created automatically to introduce Livemark. We will list here core <a href="https://livemark.frictionlessdata.io/">Livemark</a> features and you can play with theme live editing the document. It's possible to use any standard Markdown features as well.</p>
-<h2>Logic</h2>
-<p>We can pre-process our markdown file using <a href="https://jinja.palletsprojects.com/">Jinja</a>:</p>
-<ul>
-<li>Volkswagen Vento: $785</li>
-<li>Hyundai Verna: $774</li>
-<li>Skoda Rapid: $756</li>
-<li>Suzuki Ciaz: $725</li>
-<li>Renault Scala: $724</li>
-</ul>
-<h2>Table</h2>
-<p>We can visualize our data as a table using <a href="https://datatables.net/">DataTables</a>:</p>
-<div class="livemark-table" style="overflow-x: auto">
-  <div style="width: 600px">
-    <table id="livemark-table-1">
-      <thead>
-        <tr>
-                    <th>type</th>
-                    <th>brand</th>
-                    <th>model</th>
-                    <th>price</th>
-                    <th>kmpl</th>
-                    <th>bhp</th>
-                  </tr>
-      </thead>
-      <tbody>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Volkswagen</td>
-                    <td>Vento</td>
-                    <td>785</td>
-                    <td>16.1</td>
-                    <td>104</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Hyundai</td>
-                    <td>Verna</td>
-                    <td>774</td>
-                    <td>17.4</td>
-                    <td>106</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Skoda</td>
-                    <td>Rapid</td>
-                    <td>756</td>
-                    <td>15.0</td>
-                    <td>104</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Suzuki</td>
-                    <td>Ciaz</td>
-                    <td>725</td>
-                    <td>20.7</td>
-                    <td>91</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Renault</td>
-                    <td>Scala</td>
-                    <td>724</td>
-                    <td>16.9</td>
-                    <td>98</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Suzuki</td>
-                    <td>SX4</td>
-                    <td>715</td>
-                    <td>16.5</td>
-                    <td>103</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Fiat</td>
-                    <td>Linea</td>
-                    <td>700</td>
-                    <td>15.7</td>
-                    <td>112</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Nissan</td>
-                    <td>Sunny</td>
-                    <td>699</td>
-                    <td>16.9</td>
-                    <td>98</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Fiat</td>
-                    <td>Linea Classic</td>
-                    <td>612</td>
-                    <td>14.9</td>
-                    <td>89</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Toyota</td>
-                    <td>Etios</td>
-                    <td>603</td>
-                    <td>16.8</td>
-                    <td>89</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>San</td>
-                    <td>Storm</td>
-                    <td>595</td>
-                    <td>16.0</td>
-                    <td>59</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Chevrolet</td>
-                    <td>Sail</td>
-                    <td>551</td>
-                    <td>18.2</td>
-                    <td>82</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Volkswagen</td>
-                    <td>Polo</td>
-                    <td>535</td>
-                    <td>16.5</td>
-                    <td>74</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Hyundai</td>
-                    <td>i20</td>
-                    <td>523</td>
-                    <td>18.6</td>
-                    <td>82</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Honda</td>
-                    <td>Amaze</td>
-                    <td>519</td>
-                    <td>18.0</td>
-                    <td>87</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Suzuki</td>
-                    <td>Swift DZire</td>
-                    <td>508</td>
-                    <td>19.1</td>
-                    <td>86</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Ford</td>
-                    <td>Classic</td>
-                    <td>506</td>
-                    <td>14.1</td>
-                    <td>100</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Skoda</td>
-                    <td>Fabia</td>
-                    <td>503</td>
-                    <td>16.4</td>
-                    <td>75</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Toyota</td>
-                    <td>Etios Liva</td>
-                    <td>500</td>
-                    <td>17.7</td>
-                    <td>79</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Fiat</td>
-                    <td>Punto Evo</td>
-                    <td>499</td>
-                    <td>15.8</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Tata</td>
-                    <td>Indigo</td>
-                    <td>499</td>
-                    <td>14.0</td>
-                    <td>65</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Hyundai</td>
-                    <td>Xcent</td>
-                    <td>496</td>
-                    <td>19.1</td>
-                    <td>82</td>
-                  </tr>
-                <tr>
-                    <td>Sedan</td>
-                    <td>Tata</td>
-                    <td>Zest</td>
-                    <td>481</td>
-                    <td>17.6</td>
-                    <td>89</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Chevrolet</td>
-                    <td>Sail Hatchback</td>
-                    <td>468</td>
-                    <td>18.2</td>
-                    <td>82</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Swift</td>
-                    <td>462</td>
-                    <td>20.4</td>
-                    <td>83</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Renault</td>
-                    <td>Pulse</td>
-                    <td>446</td>
-                    <td>18.0</td>
-                    <td>74</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Ritz</td>
-                    <td>442</td>
-                    <td>18.5</td>
-                    <td>86</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Chevrolet</td>
-                    <td>Beat</td>
-                    <td>421</td>
-                    <td>18.6</td>
-                    <td>79</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Honda</td>
-                    <td>Brio</td>
-                    <td>421</td>
-                    <td>19.4</td>
-                    <td>87</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Hyundai</td>
-                    <td>i10</td>
-                    <td>418</td>
-                    <td>19.8</td>
-                    <td>68</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Ford</td>
-                    <td>Figo</td>
-                    <td>414</td>
-                    <td>15.3</td>
-                    <td>70</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Nissan</td>
-                    <td>Micra</td>
-                    <td>413</td>
-                    <td>19.5</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Celerio</td>
-                    <td>392</td>
-                    <td>23.1</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Wagon-R</td>
-                    <td>363</td>
-                    <td>20.5</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Volkswagen</td>
-                    <td>Up</td>
-                    <td>360</td>
-                    <td>21.0</td>
-                    <td>74</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Chevrolet</td>
-                    <td>Spark</td>
-                    <td>345</td>
-                    <td>16.2</td>
-                    <td>62</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Estilo</td>
-                    <td>338</td>
-                    <td>19.0</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Alto</td>
-                    <td>315</td>
-                    <td>24.1</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Nissan</td>
-                    <td>Datsun GO</td>
-                    <td>312</td>
-                    <td>20.6</td>
-                    <td>67</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Hyundai</td>
-                    <td>EON</td>
-                    <td>302</td>
-                    <td>21.1</td>
-                    <td>55</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Suzuki</td>
-                    <td>Alto 800</td>
-                    <td>248</td>
-                    <td>22.7</td>
-                    <td>47</td>
-                  </tr>
-                <tr>
-                    <td>Hatchback</td>
-                    <td>Tata</td>
-                    <td>Nano</td>
-                    <td>199</td>
-                    <td>23.9</td>
-                    <td>38</td>
-                  </tr>
-              </tbody>
-      <tfoot>
-        <tr>
-                    <th>type</th>
-                    <th>brand</th>
-                    <th>model</th>
-                    <th>price</th>
-                    <th>kmpl</th>
-                    <th>bhp</th>
-                  </tr>
-      </tfoot>
-    </table>
-  </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  $('#livemark-table-1').DataTable(JSON.parse('{"order": [[3, "desc"]], "columns": [{"data": "type"}, {"data": "brand"}, {"data": "model"}, {"data": "price"}, {"data": "kmpl"}, {"data": "bhp"}], "columnDefs": [{"targets": "_all", "orderSequence": ["desc", "asc"]}]}'))
-})
-</script>
-
-<h2>Chart</h2>
-<p>Another option is to draw a chart using <a href="https://vega.github.io/vega-lite/">Vega</a>:</p>
-<div class="livemark-chart" style="overflow-x: auto">
-  <div id="livemark-chart-1">
-  </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  vegaEmbed('#livemark-chart-1', JSON.parse('{"data": {"url": "data/cars.csv"}, "mark": "circle", "selection": {"brush": {"type": "interval"}}, "encoding": {"x": {"type": "quantitative", "field": "kmpl", "scale": {"domain": [12, 25]}}, "y": {"type": "quantitative", "field": "price", "scale": {"domain": [100, 900]}}, "color": {"condition": {"selection": "brush", "field": "type", "type": "nominal"}, "value": "grey"}, "size": {"type": "quantitative", "field": "bhp"}}, "width": 500, "height": 300}'))
-})
-</script>
-
-<h2>Script</h2>
-<p>Moreover, we can execute scripts in <a href="https://www.python.org/">Python</a>/<a href="https://www.gnu.org/software/bash/">Bash</a>:</p>
-<pre><code class="language-python">for number in range(1, 6):
-    print(f'Hello World #{number}!')
-</code></pre>
-
-<pre><code class="language-markup">Hello World #1!
-Hello World #2!
-Hello World #3!
-Hello World #4!
-Hello World #5!</code></pre>
-<h2>Markup</h2>
-<p>Markdown is not enough? Finally, let's add some markup with <a href="https://getbootstrap.com/">Bootstrap</a>:</p>
-<div style="max-width: 600px">
-<div class="container">
-<div class="row">
-<div class="col-sm">
-  <div class="livemark-markdown"><p><img src="https://livemark.frictionlessdata.io/assets/data-package.png" alt="Package"></p>
-</div>
-  <div class="text-center">
-  <p><strong>Data Package</strong></p>
-  <p>A simple container format for describing a coherent collection of data in a single package.</p>
-  </div>
-</div>
-<div class="col-sm">
-  <div class="livemark-markdown"><p><img src="https://livemark.frictionlessdata.io/assets/data-resource.png" alt="Resource"></p>
-</div>
-  <div class="text-center">
-  <p><strong>Data Resource</strong></p>
-  <p>A simple format to describe and package a single data resource such as a individual table or file.</p>
-  </div>
-</div>
-<div class="col-sm">
-  <div class="livemark-markdown"><p><img src="https://livemark.frictionlessdata.io/assets/table-schema.png" alt="Schema"></p>
-</div>
-  <div class="text-center">
-  <p><strong>Table Schema</strong></p>
-  <p>A simple format to declare a schema for tabular data. The schema is designed to be expressible in JSON.</p>
-  </div>
-</div>
-</div>
-</div>
-</div>
+<h1>Meet Livemark</h1>
+<p>
+<p id="livemark-blog-info">
+  <strong>By Gabriel Braico Dornas on 2022-07-04</strong> »
+  <a href="index.html">Blog Index</a>
+</p>We are very excited to announce that a new tool has been added to the Frictionless Data toolkit: Livemark. What is that? Livemark is a great tool that allows you to publish data articles very easily, giving you the possibility to see your data live on a working website in a blink of an eye.</p>
+<h2>How does it work?</h2>
+<p>Livemark is a Python library generating a static page that extends Markdown with interactive charts, tables, scripts, and much much more. You can use the Frictionless framework as a <code>frictionless</code> variable to work with your tabular data in Livemark.</p>
+<p>Livemark offers a series of useful features, like automatically generating a table of contents and providing a scroll-to-top button when you scroll down your document. You can also customise the layout of your newly created webpage.</p>
+<h2>How can you get started?</h2>
+<p>Livemark is very easy to use. We invite you watch this great demo by developer Evgeny Karev:</p>
+<div class="livemark-video">
+  <iframe class="" width="600" height="400" src="https://www.youtube.com/embed/NMg-eCbO6L0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div><p>You can also have a look at the <a href="https://frictionlessdata.github.io/livemark/">documentation on GitHub</a>.</p>
+<h2>What do you think?</h2>
+<p>If you create a site using Livemark, please let us know! Frictionless Data is an open source project, therefore we encourage you to give us feedback. Let us know your thoughts, suggestions, or issues by joining us in our community chat on <a href="https://discord.com/invite/Sewv6av">Discord</a> or by opening an issue in the <a href="https://github.com/frictionlessdata/livemark">GitHub repo</a>.</p>
 
 <div id="livemark-signs">
   <div>
-        <div class="next">
-      <a href="pages/data.html">
-        Data Collection »
+            <div class="prev">
+      <a href="2022-07-04-new-test.html">
+        « Meet Livemark
       </a>
     </div>
-          </div>
+      </div>
 </div>
 </div>
 <div id="livemark-right">
@@ -2330,7 +1901,7 @@ Hello World #5!</code></pre>
       </a>
     </li>
         <li>
-      <a href="https://github.com/frictionlessdata/livemark-project/edit/main/index.md" target="_blank">
+      <a href="https://github.com/frictionlessdata/livemark-project/edit/main/blog/2022-07-04-blog-test.md" target="_blank">
         Edit
       </a>
     </li>
@@ -2408,10 +1979,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-<script src="https://unpkg.com/vega@5.20.2/build/vega.min.js"></script>
-<script src="https://unpkg.com/vega-lite@5.1.0/build/vega-lite.min.js"></script>
-<script src="https://unpkg.com/vega-embed@6.18.2/build/vega-embed.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 <script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
 <script>
 
@@ -2686,37 +2253,37 @@ document.addEventListener("DOMContentLoaded", function () {
           'index': {
           'name': 'Livemark Project',
           'path': 'index',
-          'relpath': 'index',
+          'relpath': '../index',
           'text': "# Livemark Project [![Build](https://img.shields.io/github/workflow/status/frictionlessdata/livemark-project/general/main)](https://github.com/frictionlessdata/livemark-project/actions) [![Codebase](https://img.shields.io/badge/codebase-github-brightgreen)](https://github.com/frictionlessdata/livemark-project) [![Support](https://img.shields.io/badge/support-discord-brightgreen)](https://discord.com/channels/695635777199145130/695635777199145133) \u003e Edit `index.md` file to explore Livemark\u0027s features or just remove everything to start from a scratch. It\u0027s a template document created automatically to introduce Livemark. We will list here core [Livemark](https://livemark.frictionlessdata.io/) features and you can play with theme live editing the document. It\u0027s possible to use any standard Markdown features as well. ## Logic We can pre-process our markdown file using [Jinja](https://jinja.palletsprojects.com/): {% for car in frictionless.extract(\u0027data/cars.csv\u0027, layout={\"limitRows\": 5}) %} - {{ car.brand }} {{ car.model }}: ${{ car.price }} {% endfor %} ## Table We can visualize our data as a table using [DataTables](https://datatables.net/): ```yaml table data: data/cars.csv width: 600 order: - [3, \u0027desc\u0027] columns: - data: type - data: brand - data: model - data: price - data: kmpl - data: bhp ``` ## Chart Another option is to draw a chart using [Vega](https://vega.github.io/vega-lite/): ```yaml chart data: url: data/cars.csv mark: circle selection: brush: type: interval encoding: x: type: quantitative field: kmpl scale: domain: [12,25] y: type: quantitative field: price scale: domain: [100,900] color: condition: selection: brush field: type type: nominal value: grey size: type: quantitative field: bhp width: 500 height: 300 ``` ## Script Moreover, we can execute scripts in [Python](https://www.python.org/)/[Bash](https://www.gnu.org/software/bash/): ```python script for number in range(1, 6): print(f\u0027Hello World #{number}!\u0027) ``` ## Markup Markdown is not enough? Finally, let\u0027s add some markup with [Bootstrap](https://getbootstrap.com/): ```html markup ![Package](https://livemark.frictionlessdata.io/assets/data-package.png) Data Package A simple container format for describing a coherent collection of data in a single package. ![Resource](https://livemark.frictionlessdata.io/assets/data-resource.png) Data Resource A simple format to describe and package a single data resource such as a individual table or file. ![Schema](https://livemark.frictionlessdata.io/assets/table-schema.png) Table Schema A simple format to declare a schema for tabular data. The schema is designed to be expressible in JSON. ```",
       },
           'pages/data': {
           'name': 'Data Collection',
           'path': 'pages/data',
-          'relpath': 'pages/data',
+          'relpath': '../pages/data',
           'text': "# Data Collection ## Loading Let\u0027s load the dataset we\u0027re going to use: ```python task id=data import os from frictionless import Resource resource = Resource(\u0027https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv\u0027) resource.write(\u0027data/cars.csv\u0027) ``` ## Attributions The data sources we have used: - The cars example provided by [Visdown](https://visdown.com/) project.",
       },
           'pages/contrib': {
           'name': 'Contribute',
           'path': 'pages/contrib',
-          'relpath': 'pages/contrib',
+          'relpath': '../pages/contrib',
           'text': "# Contribute Welcome! We\u0027re happy you\u0027d like to contribute! This is an open project, and we value contributions from everyone. We use Github as a code and issues hosting platform. To report a bug or propose a new feature, please open an [issue](https://github.com/frictionlessdata/livemark-project/issues). For pull requests, we would ask you initially create an issue and then create a pull requests linked to this issue. ## Setup To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/livemark-project.git $ cd livemark-project ``` Create a virtual environment (optional): ```bash $ python3 -m venv .python $ source .python/bin/activate ``` And install livemark: ``` $ pip install livemark ``` ## Install Run the following command to install dependencies: ```bash task id=install pip install -r requirements.txt ``` ## Data To collect the data use the data collection script (run only if you want to update the data): ```bash $ livemark run data ``` See in-detail on the [Data Collection](data.html) page. ## Build \u003e See the Livemark documentation for full details: https://livemark.frictionlessdata.io/ You can then use the command-line interface to build the output HTML file: ```bash $ livemark build ``` Or start a livereload server to automatically reload the output page as you modify the input Markdown document: ```bash $ livemark start ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". That means that the page will automatically be deployed every time there is a change approved from a Pull Request. If you\u0027d like to update Github Issue/PR templates run: ```bash task id=github sed -i -E \"s/@(\\w*)/@$(head -n 1 LEAD.md)/\" .github/issue_template.md sed -i -E \"s/@(\\w*)/@$(head -n 1 LEAD.md)/\" .github/pull_request_template.md ```",
       },
           'blog/index': {
           'name': 'Blog',
           'path': 'blog/index',
-          'relpath': 'blog/index',
+          'relpath': 'index',
           'text': "# Blog {% for item in document.get_plugin(\u0027blog\u0027).items %} {{ item.document.name }} By {{ item.document.get_plugin(\u0027blog\u0027).author }} on {{ item.document.get_plugin(\u0027blog\u0027).date }} {{ item.document.description }} Read more \u00bb {% endfor %}",
       },
           'blog/2022-07-04-new-test': {
           'name': 'Meet Livemark',
           'path': 'blog/2022-07-04-new-test',
-          'relpath': 'blog/2022-07-04-new-test',
+          'relpath': '2022-07-04-new-test',
           'text': "# Meet Livemark We are very excited to announce that a new tool has been added to the Frictionless Data toolkit: Livemark. What is that? Livemark is a great tool that allows you to publish data articles very easily, giving you the possibility to see your data live on a working website in a blink of an eye. ## How does it work? Livemark is a Python library generating a static page that extends Markdown with interactive charts, tables, scripts, and much much more. You can use the Frictionless framework as a `frictionless` variable to work with your tabular data in Livemark. Livemark offers a series of useful features, like automatically generating a table of contents and providing a scroll-to-top button when you scroll down your document. You can also customise the layout of your newly created webpage. ## How can you get started? Livemark is very easy to use. We invite you watch this great demo by developer Evgeny Karev: ```yaml video/youtube code: NMg-eCbO6L0 ``` You can also have a look at the [documentation on GitHub](https://frictionlessdata.github.io/livemark/). ## What do you think? If you create a site using Livemark, please let us know! Frictionless Data is an open source project, therefore we encourage you to give us feedback. Let us know your thoughts, suggestions, or issues by joining us in our community chat on [Discord]( https://discord.com/invite/Sewv6av) or by opening an issue in the [GitHub repo](https://github.com/frictionlessdata/livemark).",
       },
           'blog/2022-07-04-blog-test': {
           'name': 'Meet Livemark',
           'path': 'blog/2022-07-04-blog-test',
-          'relpath': 'blog/2022-07-04-blog-test',
+          'relpath': '2022-07-04-blog-test',
           'text': "# Meet Livemark We are very excited to announce that a new tool has been added to the Frictionless Data toolkit: Livemark. What is that? Livemark is a great tool that allows you to publish data articles very easily, giving you the possibility to see your data live on a working website in a blink of an eye. ## How does it work? Livemark is a Python library generating a static page that extends Markdown with interactive charts, tables, scripts, and much much more. You can use the Frictionless framework as a `frictionless` variable to work with your tabular data in Livemark. Livemark offers a series of useful features, like automatically generating a table of contents and providing a scroll-to-top button when you scroll down your document. You can also customise the layout of your newly created webpage. ## How can you get started? Livemark is very easy to use. We invite you watch this great demo by developer Evgeny Karev: ```yaml video/youtube code: NMg-eCbO6L0 ``` You can also have a look at the [documentation on GitHub](https://frictionlessdata.github.io/livemark/). ## What do you think? If you create a site using Livemark, please let us know! Frictionless Data is an open source project, therefore we encourage you to give us feedback. Let us know your thoughts, suggestions, or issues by joining us in our community chat on [Discord]( https://discord.com/invite/Sewv6av) or by opening an issue in the [GitHub repo](https://github.com/frictionlessdata/livemark).",
       },
       };
