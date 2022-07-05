@@ -16,5 +16,4 @@ livemark build pages/contrib.md --target pages/contrib.html && \
 
 # Blog
 livemark build blog/index.md --target blog/index.html && \
-livemark build blog/2022-07-04-blog-test.md --target blog/2022-07-04-blog-test.html && \
-livemark build blog/2022-07-04-new-test.md --target blog/2022-07-04-new-test.html
+livemark build blog/2022-07-04-github-pages-custom-domain-configuration.md --target blog/2022-07-04-github-pages-custom-domain-configuration.html
