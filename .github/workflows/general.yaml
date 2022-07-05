@@ -1,7 +1,13 @@
 name: general
 
 on:
-  push
+  push:
+    paths:
+      - 'index.md'
+      - 'livemark.yaml'
+      - 'pages/*.md'
+      - 'blog/*.md'
+      - 'build.sh'
 
 jobs:
 
