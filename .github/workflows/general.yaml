@@ -13,8 +13,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install livemark
         run: pip install -r requirements.txt
-      - name: Add executable permition to build.sh
-        run: chmod +x build.sh
       - name: Build html pages
         run: ./build.sh
       - name: Commit build
