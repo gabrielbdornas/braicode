@@ -10,9 +10,9 @@ topics:
 site:
   favicon: assets/favicon.ico
   styles:
-    - style.css
+    - assets/style.css
   scripts:
-    - script.js
+    - assets/script.js
 pages:
   items:
     - path: index
