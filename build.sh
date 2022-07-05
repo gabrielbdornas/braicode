@@ -1,4 +1,5 @@
 #Clean
+rm -rf *.html
 rm -rf pages/*.html
 rm -rf blog/*.html
 
