@@ -33,19 +33,17 @@ $ pip install -r requirements.txt
 
 ## Deploy
 
-As default all pages of the project lives on `pages` and `blog` folders. To build an `html` page based on a brand new `markdown` use `livemark build` command. To automate this process, after writing a new page I also include its build process on `build.sh` executable file (always above "Starting server..." comment):
+As default all pages of the project lives on `pages` and `blog` folders. To build an `html` page based on a brand new `markdown` use `livemark build` command. To automate this process, after writing a new page I also include its build process on `build.sh` executable file:
 
 ```
 livemark build pages/new_page.md --target pages/new_page.html && \
-
-# Starting server...
-...
 ```
 
 To test it in your local environment run:
 
 ```
 $ ./build.sh
+$ livemark start
 ```
 
 It'll build all your pages and start a local server on `http://localhost:7000`
