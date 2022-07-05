@@ -1,35 +1,21 @@
-# name: general
+name: general
 
-# on:
-#   schedule:
-#     - cron: "0 6 * * *"
+on:
+  push
 
-# jobs:
+jobs:
 
-#   # Update
+  # Update
 
-#   update:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           persist-credentials: false
-#           fetch-depth: 0
-#       - name: Install livemark
-#         run: pip install livemark
-#       - name: Install dependencies
-#         run: livemark run install
-#       - name: Update data
-#         run: livemark run data
-#       - name: Build site
-#         run: livemark build
-#       - name: Commit files
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "Github Action"
-#           git commit -a -m "Updated data"
-#       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install livemark
+        run: pip install -r requirements.txt
+      - name: Build html pages
+        run: ./build.sh
+      - name: Commit build
+        uses: stefanzweifel/git-auto-commit-action@v4
