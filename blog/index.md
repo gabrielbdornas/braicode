@@ -1,3 +1,5 @@
+# Blog
+
 {% for item in document.get_plugin('blog').items %}
 <div class="livemark-blog-item">
   <h2><a href="{{ item.relpath }}.html">{{ item.document.name }}</a></h2>
