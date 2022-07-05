@@ -24,7 +24,7 @@ This is a very simplified explanation!
 
 Let's use our brand new variable and print its value.
 
-```Python
+```python script
 price = 10
 print(price)
 ```
@@ -37,7 +37,7 @@ So, to store the number 10 in the computer’s memory first will get [converted 
 
 Taking this program to the next level. Updating the value of this price variable to a new value, like 20, we should see 20 printed, because the Python interpreter executes our code line by line from the top.
 
-```Python
+```python script
 price = 10
 price = 20
 print(price)
@@ -49,7 +49,7 @@ So far, the numbers that we have until now are whole numbers without a decimal p
 In programming, we refer to these numbers as integers.
 We can also use numbers with a decimal point. These kind of numbers are called the floating-point number, or float for short.
 
-```Python
+```python script
 rating = 4.9
 print(rating)
 ```
@@ -59,16 +59,16 @@ Now we defined another variable called rating, but this time the float number 4.
 We can also define a variable and set it to a [string](https://en.wikipedia.org/wiki/String_(computer_science)), for example, name equals Paul.
 In a very simplified way, in computer science, [strings](https://www.bbc.co.uk/bitesize/guides/zc6s4wx/revision/4#:~:text=Most%20programming%20languages%20have%20a,and%20characters%20may%20be%20repeated.&text=A%20string%20can%20be%20a%20constant%20or%20variable%20.) are ordered sequences of characters.
 
-```Python
+```python script
 name = 'Paul'
 print(name)
 ```
 
-Above, the name variable was created and the value Paul was assigned to it.
+Above, the name variable was created and the value Paul was assigned to it. 
 
 We also have another kind of value called boolean which can be True or False. They are like yes and no in English. Below is an example. I'm going to define a variable is_published and set it to True.
 
-```Python
+```python script
 is_published = True
 print(is_published)
 ```
@@ -95,7 +95,7 @@ Them print this new variables.
 
 Before checking it out below try to do it yourself.
 
-```Python
+```python script
 name = "Paul McCartney"
 age = 20
 is_new_singer = True
@@ -128,8 +128,8 @@ type: primary
 text: Do you note that we added a space after the question mark? We did this because in the terminal window the cursor to the user's answer will be separated from the question mark, otherwise, it would be so close.
 ```
 
-The input function will return the user's answer and now we can store it in the memory using the variable, let's say, user_name.
-We'll use the user_name variable to print a dynamic message like "Hi John, how is it going!".
+The input function will return the user's answer and now we can store it in the memory using a variable, let's say, `user_name`.
+We'll use the `user_name` variable to print a dynamic message like "Hi John, how is it going!".
 To perform this we'll use plus signs in a technique called string concatenation.
 
 ```Python
@@ -137,8 +137,12 @@ user_name = input("What is your name? ")
 print("Hi " + user_name + ", how is it going!")
 ```
 
-Above we have "Hi ", which is a string, concatenated or combined with another two strings, our user_name variable, and ", how is it going!".
-In this expression (a piece of code that uses a value), we combined 3 strings.
+```
+Hi Gabriel Braico Dornas, how is it going!
+```
+
+Above we have "Hi ", which is a string, concatenated or combined with another two strings, our `user_name` variable, and ", how is it going!".
+In this expression we combined 3 strings.
 
 Now it's your turn to extend this program and ask two questions, the person's name, and their favorite color. Print a message like "John likes blue!".
 
@@ -150,13 +154,17 @@ favorite_color = input("What is your favorite color? ")
 print(user_name + " likes " + favorite_color + "!")
 ```
 
+```
+John likes blue!
+```
+
 ## Type conversion
 
 Now, we're going to write a program that will ask about the current year and the year that we were born in.
 Then it will use these variables to calculate our age.
 As usual, we'll start with our input functions.
-The return values will be stored in variables called current_year and birth_year (remember to use underscore to separate multiple words).
-Next, we need to calculate the age, so we define another variable called age, and here we do some basic math like age = current_year - birth_year.
+The return values will be stored in variables called `current_year` and `birth_year` (remember to use underscore to separate multiple words).
+Next, we need to calculate the age, so we define another variable called `age`, and here we do some basic math like `age = current_year - birth_year`.
 Finally, print age variable.
 
 ```Python
@@ -206,25 +214,34 @@ print(age)
 ```
 
 We've passed these strings to the int function, which will convert it into an integer, and then the Python interpreter will be able to evaluate the expression.
+Considering the user's input `current_year = 2022` and `birth_year = 2000` the result will be:
 
-So far you have learned about two built-in functions one is print the other is input.
-We have a few other functions for converting values into different types. We have int for converting a float into an integer, we also have float to converting a int into a float, or a number with a decimal point.
-And we also have bool for converting a numbers and strings into a boolean value.
+```
+20
+```
+
+So far you have learned about two built-in functions one is `print()` the other is `input()`.
+We have a few other functions for converting values into different types. We have `int()` for converting values into an integer, we also have `float()` to convertions into a float (a number with a decimal point).
+And we also have bool for converting numbers and strings into a boolean value.
 It's a good exercice to play around with this conversions functions, try it out!
 
 For instance, what we need to take away is whenever you use the input function, you always get a string, so if you're expecting a numerical value you should always convert that string into an integer or to a float.
 
 ## Type Function
 
-Let's learn another very used built-in function called type.
+Let's learn another very used built-in function called `type()`.
 If we use it in our age variable it will print the type of it.
-We look at classes in the future, but for now, it's good to kwnow that age here belongs to the int class.
+We'll look at classes in the future, but for now, it's good to know that age here belongs to the `int` class.
 
 ```Python
 current_year = int(input('Current year? '))
 birth_year = int(input('Your birth year? '))
 age = current_year - birth_year
 print(type(age))
+```
+
+```
+<class 'int'>
 ```
 
 So, here's a little exercise for you.
@@ -238,9 +255,15 @@ print(weight_kg)
 ```
 
 Alright, above we used our input function and ask for the weight in pounds.
-We set the result to a variable called weight_lbs.
+We set the result to a variable called `weight_lbs`.
 Then we converted the informed value into kilograms (just multiply it to 0.45).
-Finally, we printed weight_kg result. Straightforward, isn't it?
+Finally, we printed `weight_kg` result. Straightforward, isn't it?
+
+Considering the user's input `weight_lbs = 100` the result `weight_kg` will be:
+
+```
+45
+```
 
 ## Variable Names
 
@@ -257,20 +280,8 @@ The Python language reserves a small set of [keywords](https://realpython.com/py
 No object or variables can have the same name as a reserved word.
 You can see this list any time by typing help("keywords") to the Python interpreter.
 
-```Python
->>> help('keywords')
-
-Here is a list of the Python keywords.  Enter any keyword to get more help.
-
-False               break               for                 not
-None                class               from                or
-True                continue            global              pass
-__peg_parser__      def                 if                  raise
-and                 del                 import              return
-as                  elif                in                  try
-assert              else                is                  while
-async               except              lambda              with
-await               finally             nonlocal            yield
+```python script
+help('keywords')
 ```
 
 Trying to create a variable with the same name as any reserved word results in an error:
