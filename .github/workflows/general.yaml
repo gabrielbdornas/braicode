@@ -20,6 +20,6 @@ jobs:
       - name: Install livemark
         run: pip install -r requirements.txt
       - name: Build html pages
-        run: ./build.sh
+        run:  make build
       - name: Commit build
         uses: stefanzweifel/git-auto-commit-action@v4
