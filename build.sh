@@ -1,7 +1,11 @@
-#Clean
+# Clean
 rm -rf *.html
 rm -rf pages/*.html
 rm -rf blog/*.html
+
+# index
+
+livemark build index.md --target index.html --config livemark.yaml&& \
 
 # Pages
 livemark build pages/001-01-terminal-101.md --target pages/001-01-terminal-101.html && \
