@@ -18,6 +18,7 @@ pages:
     - path: index
     - path: pages/data
     - path: pages/contrib
+    - path: blog/index
 links:
   items:
     - name: Frictionless
