@@ -1,10 +1,10 @@
 brand:
-  text: Livemark Project
+  text: Braicode
 about:
-  text: A Livemark project template
+  text: A Code Study Material
 github:
-  user: frictionlessdata
-  repo: livemark-project
+  user: gabrielbdornas
+  repo: braicode
 topics:
   selector: h2
 site:
@@ -15,13 +15,17 @@ site:
     - assets/script.js
 pages:
   items:
-    - path: index
-    - path: pages/data
-    - path: pages/contrib
+    - name: Warm-up
+      items:
+        - path: pages/001-01-terminal-101
+        - path: pages/001-02-version-control-system-101
+    - name: Python Essential
+      items:
+        - path: pages/002-01-setup
+        - path: pages/002-02-variables
     - path: blog/index
+    - path: pages/contrib
 links:
   items:
-    - name: Frictionless
-      path: https://frictionlessdata.io
-    - name: Livemark
-      path: https://livemark.frictionlessdata.io
+    - name: Gabriel Braico Dornas
+      path: https://braico.me

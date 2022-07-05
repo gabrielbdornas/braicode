@@ -21,19 +21,19 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 
 # On windows machine
-$ python3 -m venv venv
+$ python -m venv venv
 $ source venv/Scripts/activate
 ```
 
 And install dependencies:
 
-```bash task id=install
+```
 $ pip install -r requirements.txt
 ```
 
 ## Deploy
 
-As default all pages of the project lives on `pages` and `blog` folders. To build an `html` page based on a brand new `markdown` use `livemark build` command. To automate this process, all the time I write a new page I also include its build process on `build.sh` executable file (always above "Starting server..." comment):
+As default all pages of the project lives on `pages` and `blog` folders. To build an `html` page based on a brand new `markdown` use `livemark build` command. To automate this process, after writing a new page I also include its build process on `build.sh` executable file (always above "Starting server..." comment):
 
 ```
 livemark build pages/new_page.md --target pages/new_page.html && \
