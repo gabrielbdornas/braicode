@@ -11,7 +11,7 @@
           on {{ item.document.get_plugin('blog').date }}
         </strong>
       </p>
-      {{ item.document.description }}
+      <div class="livemark-markdown">{{ item.document.description }}</div>
       <a href="{{ item.relpath }}.html">Read more &raquo;</a>
     </div>
     <div class="col-4">
