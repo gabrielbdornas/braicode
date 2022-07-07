@@ -23,6 +23,7 @@ pages:
       items:
         - path: pages/002-01-setup
         - path: pages/002-02-variables
+        - path: pages/002-03-strings
     - path: blog/index
     - path: pages/contrib
 links:
