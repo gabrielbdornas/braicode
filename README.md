@@ -1,6 +1,6 @@
 ## Braicode Project
 
-Braico space to create programing content, as better explained on [index](pages/index.md) page.
+Braico space to create programing content, as better explained on [index](index.md) page.
 
 For general instructions about how to deploy and run server see [CONTRIBUTE](pages/contrib.md) file.
 
