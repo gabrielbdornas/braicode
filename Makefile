@@ -1,4 +1,4 @@
-.PHONY: help build build-pages build-blog clean
+.PHONY: help build build-pages build-blog clean start
 
 PAGES_MD_FILES= $(wildcard pages/*.md)
 PAGES_HTML_FILES= $(patsubst pages/%.md, pages/%.html, $(PAGES_MD_FILES))
@@ -31,3 +31,6 @@ clean: ## Clean html pages
 	@rm -rf *.html
 	@rm -rf pages/*.html
 	@rm -rf blog/*.html
+
+start: ## Start livemark server
+	@livemark start
