@@ -1,5 +1,6 @@
 # Blog
 
+```html markup
 {% for item in document.get_plugin('blog').items %}
 <div class="livemark-blog-item">
   <h2><a href="{{ item.relpath }}.html">{{ item.document.name }}</a></h2>
@@ -11,7 +12,7 @@
           on {{ item.document.get_plugin('blog').date }}
         </strong>
       </p>
-      <div class="livemark-markdown">{{ item.document.description }}</div>
+      {{ item.document.get_plugin('blog').description }}
       <a href="{{ item.relpath }}.html">Read more &raquo;</a>
     </div>
     <div class="col-4">

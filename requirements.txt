@@ -4,4 +4,4 @@ pylama==8.3.8
 black==22.6.0
 ipython==8.4.0
 ipdb==0.13.9
-livemark==0.87.0
+livemark==0.92
