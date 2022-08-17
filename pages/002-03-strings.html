@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="None">
-<meta name="keywords" content="setup">
+<meta name="description" content="In this tutorial, you're going to learn more about Python strings.">
+<meta name="keywords" content="strings">
 <link rel="icon" href="../assets/favicon.ico">
-<title>Setup | Braicode</title>
+<title>Strings | Braicode</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1716,7 +1716,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
         Python Essential
       </a>
             <ul class="secondary">
-                <li class="secondary active">
+                <li class="secondary ">
           <a href="002-01-setup.html" class="secondary">
             Setup
           </a>
@@ -1726,7 +1726,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
             Variables
           </a>
         </li>
-                <li class="secondary ">
+                <li class="secondary active">
           <a href="002-03-strings.html" class="secondary">
             Strings
           </a>
@@ -1748,22 +1748,246 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-main">
 <div id="livemark-notes">
-      <a href="https://github.com/gabrielbdornas/braicode/edit/main/pages/002-01-setup.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+      <a href="https://github.com/gabrielbdornas/braicode/edit/main/pages/002-03-strings.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
     (2022-08-17 20:34)
 </div>
 
-<h1>Setup</h1>
+<h1>Strings</h1>
+<p>In this tutorial, you're going to learn more about Python strings.
+Python strings are sequences of characters and numbers.
+Strings are usually created using single, double or triple quotes. Let’s take a look!</p>
+<pre><code class="language-python">my_string = "Welcome to Python!"
+another_string = 'The bright red fox jumped the fence.'
+a_long_string = '''This is a
+multi-line string. It covers more than
+one line'''
+</code></pre>
+<p><strong>The triple quoted line can be done with three single quotes or three double quotes</strong>.
+This way, they allow the programmer to write strings over multiple lines.
+If you print it out, you will notice that the output retains the line breaks. </p>
+<p>If you need to use single quotes in your string, then wrap it in double quotes.
+Here's an example: imagine you wanted to create the string <em>Python's course for Beginners</em>.
+So we want to add an apostrophe, like this:</p>
+<pre><code class="language-python">course = 'Python's course for Beginners'
+</code></pre>
+<pre><code>File "&lt;stdin&gt;", line 1
+    course = 'Python's course for Beginners'
+                     ^
+SyntaxError: invalid syntax
+</code></pre>
+<p>Above the "invalid syntax" error because our string starts in 'P' and then terminates in 'n'.
+All these characters that we have here after the second apostrophe (<em>s course for Beginners</em>) Python interpreter doesn't know what they are.
+To solve this problem, we need to use double quotes to define our string, than we can have a single quote in the middle of it.</p>
+<pre><code class="language-python">course = "Python's course for Beginners"
+print(course)
+</code></pre>
+
+<pre><code class="language-markup">Python's course for Beginners</code></pre>
+<div class="livemark-remark">
+  <div class="alert alert-primary" role="alert">
+    If you need single quotes inside a string use doble quotes to define it, but if you need doble quotes inside a string define it using single ones. The same logic is applied to the triple quoted lines.
+  </div>
+</div><h2>String Indexing and Slicing</h2>
+<p>Now, let's look at other characteristics of strings in Python.
+I'm going to set the course name to <em>Python for Beginners</em> and use square brackets to get the first character of it.
+To do that we use square brackets and type <em>0</em>:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[0])
+</code></pre>
+
+<pre><code class="language-markup">P</code></pre>
+<p>Here, the <strong>index</strong> of the first character in this string is <em>0</em>.
+In other words, this is how Python strings are indexed: <em>0, 1, 2, 3</em>, etc.
+So, the index of the first character is <em>0</em>, the index of the second is <em>1</em>, and so on.</p>
+<div class="livemark-remark">
+  <div class="alert alert-primary" role="alert">
+    Python is zero-based
+  </div>
+</div><p>We can also use a negative index to get the characters started from the end.
+Passing negative 1 here, assuming that <em>0</em> is the first character, negative 1 is the last character.
+When we run this program we shoul see <em>s</em>:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[-1])
+</code></pre>
+
+<pre><code class="language-markup">s</code></pre>
+<p>If we pass negative 2, this will return the second character from the end (<em>r</em>).
+Okay?
+So, please pay close attention to this square brackets syntax, because quite often it's the topic for online Python tests or university exams.</p>
+<p>We can also use a similar sintax to extract a few characters instead of one character and this is called slicing.
+I've been surprised how often I have needed to know how to do this in my day-to-day job.
+For example, if we type:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[0:3])
+</code></pre>
+
+<pre><code class="language-markup">Pyt</code></pre>
+<p>Python interpreter will return all the characters starting with <em>0</em> all the way to <em>3</em>, but it does not return the character at the index <em>3</em>.
+We also have default values for the start and end index.
+If we don't supply the end index, Python will return all the characters to the end of the string:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[0:])
+</code></pre>
+
+<pre><code class="language-markup">Python for Beginners</code></pre>
+<p>But if you change the start index to <em>1</em>, this will exclude the first character:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[1:])
+</code></pre>
+
+<pre><code class="language-markup">ython for Beginners</code></pre>
+<p>Similarly, we have a default value for the start index.
+If we don't supply it, and add and end index like <em>5</em>, Python will assume <em>0</em> as the start index:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[:5])
+</code></pre>
+
+<pre><code class="language-markup">Pytho</code></pre>
+<p>But, what if we leave both the start and the end index?
+In this case <em>0</em> will be assumed as the start index and the lenght of the string will be assumed as the end index.
+In resume, this syntax will basically copy or clone a string:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course[:])
+</code></pre>
+
+<pre><code class="language-markup">Python for Beginners</code></pre>
+<p>Now, here's a little exercise for you:
+Define a variable, called <em>name</em>, and set it to <em>Jane</em>.
+Use <em>1</em> in start index and <em>-1</em> in end index.
+What do you think we're going to see on the terminal?
+Before checking it out below try to do it yourself.</p>
+<pre><code class="language-python">course = 'Jane'
+print(course[1:-1])
+</code></pre>
+
+<pre><code class="language-markup">an</code></pre>
+<h2>Formatted Strings</h2>
+<p>Formatted strings are particularly useful in situations where you dynamically generate some text with your variables.
+Let's say we have two variables:</p>
+<pre><code class="language-python">first_name = 'Jane'
+last_name = 'Joplin'
+</code></pre>
+<p>So let's say with these two variables, we want to generate some text like this:</p>
+<pre><code class="language-python">first_name = 'Jane'
+last_name = 'Joplin'
+Jane [Joplin] was a singer
+</code></pre>
+<p>How we do this?
+We define another variable like <em>message</em>, add the first name and concatenate this with a string that contains a space and a sqare bracket.
+Next, we need to add a last name, then we need to add a string that contains the closing square brackets followed by <em>was a singer</em></p>
+<pre><code class="language-python">first_name = 'Jane'
+last_name = 'Joplin'
+message = first_name + ' [' + last_name + '] was a singer'
+print(message)
+</code></pre>
+<p>While this approach perfectly works, it's not ideal because as our text gets more complicated it becomes harder to visualize the output.
+So someone else reading this code, they have to visualize all the string concatenations in their head.
+<strong>This is where we use formatted strings, they make it easier for us to visualize the output.</strong></p>
+<p>So, let's define another variable called <em>msg</em>, and set this to a formatted string.</p>
+<p>A formatted string is one that is prefixed with a <em>f</em>.</p>
+<pre><code class="language-python">msg = f'{first_name} [{last_name}] was a singer'
+print(msg)
+</code></pre>
+<p>With these curly braces, we're defining place holders or holes in our string, and when we run our program these holes will be filled with the value of our variables.
+So here we have 2 placeholders.</p>
+<p>With this formatted string we can easily visualize what the output looks like.</p>
+<p>So, to define formatted strings, prefix it with an <em>f</em> and add curly braces to dynamically insert values into your strings.</p>
+<h2>String Methods</h2>
+<p>To calculate the number of characters in the string below, we can use a <strong><em>built in</em> function</strong> called <em>len</em>:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(len(course))
+</code></pre>
+<p>So, as you can see, we have 20 characters in this string.
+This is particularly useful when you receive input from the user.
+For example, you have noticed that when you fill out a form online, each input field quite often has a limit.
+For example, you might have 50 characters for your name, so using this lenght function we can enforce a limit on the number of characters in an input field.
+If the user types in moe characters than we allow, we can display an error.</p>
+<p>Now, this <em>len</em> function is another function built into Python, it's a general purpose function, so it's not limited to couting the number of characters in a string.
+We can use this function to count the number of items in a list.</p>
+<p>Now we also have functions specifically for strings.
+We refer to these functions as <strong>methods</strong> (object oriented programming style).
+To access these functions, we use '.' operator:</p>
+<ul>
+<li>for converting all these characters to upper case</li>
+</ul>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.upper())
+</code></pre>
+<ul>
+<li>for converting all to lower case</li>
+</ul>
+<pre><code class="language-python">print(course.lower())
+</code></pre>
+<p>Note that these methods do not change the original strings; in fact, they create new ones and return its.
+So, if we print out our course variable right after we call the <em>upper</em> method, we can see that our course variable still has it's original form:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.upper())
+print(course)
+</code></pre>
+<p>Now if you want to find a character or a sequence of characters in a string, you can use the <em>find</em> method.
+This will return the index of the first occurrence of character 'o':</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.find('o'))
+</code></pre>
+<p>Note that the <em>find</em> method is sensitive to lower case and upper case characters.
+For example, if we pass the upper character 'O', it returns '-1' because we don't have an upper case in this string:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.find('O'))
+</code></pre>
+<p>We can also pass a sequence of characters:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.find('Beginners'))
+</code></pre>
+<p>We get '11', because the word starts woth index 11.</p>
+<p>We also have a method for replacing a character or a sequence of characters: replace.</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.replace('Beginners', 'Managers'))
+</code></pre>
+<p>The same method can be use to replace a single one character:</p>
+<pre><code class="language-python">course = 'Python for Beginners'
+print(course.replace('B', 'T'))
+</code></pre>
+<p>This method, like the <em>find</em>, is case sensitive.</p>
+<p>There are times you want to chek the existence of a character or sequence of characters in your string.
+In those situations, you use the <em>in</em> operator.
+So let's say you want to know if this string contains the word 'Python':</p>
+<pre><code class="language-python">print('Python' in course)
+</code></pre>
+<p>This is a boolean expression and get true or false. An it is another case sensitive method:</p>
+<pre><code class="language-python">print('python' in course)
+</code></pre>
+<h2>References</h2>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&amp;t=1771s">Programming with Mosh - Python Tutorial for Beginners (Strings)</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&amp;t=2256s">Programming with Mosh - Python Tutorial for Beginners (Formatted Strings)</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&amp;t=2450s">Programming with Mosh - Python Tutorial for Beginners (String Methods)</a></p>
+</li>
+<li>
+<p><a href="https://python101.pythonlibrary.org/chapter2_strings.html">Python 101 - Strings</a></p>
+</li>
+<li>
+<p><a href="https://www.codingem.com/python-how-to-quote-a-string/">How to Quote a String in Python</a></p>
+</li>
+<li>
+<p><a href="http://swcarpentry.github.io/python-novice-gapminder/03-types-conversion/index.html">The Carpentries - Data Types and Type Conversion</a></p>
+</li>
+</ul>
 
 <div id="livemark-signs">
   <div>
         <div class="next">
-      <a href="002-02-variables.html">
-        Variables »
+      <a href="../blog/index.html">
+        Blog »
       </a>
     </div>
             <div class="prev">
-      <a href="001-02-version-control-system-101.html">
-        « Version Control System 101
+      <a href="002-02-variables.html">
+        « Variables
       </a>
     </div>
       </div>
