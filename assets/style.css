@@ -1,3 +1,8 @@
 #livemark-main {
   text-align: justify;
+  margin-right: 0px !important;
+}
+
+#livemark-right {
+  display: none !important;
 }
