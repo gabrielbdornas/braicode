@@ -33,19 +33,18 @@ $ pip install -r requirements.txt
 
 ## Deploy
 
-As default all pages of the project lives on `pages` and `blog` folders. To build an `html` page based on a brand new `markdown` use `livemark build` command. To automate this process, after writing a new page I also include its build process on `build.sh` executable file:
+As default all pages of the project lives on `pages` and `blog` folders. To build the entire site just run:
 
 ```
-livemark build pages/new_page.md --target pages/new_page.html && \
+$ make build
 ```
 
 To test it in your local environment run:
 
 ```
-$ ./build.sh
-$ livemark start
+$ make start
 ```
 
-It'll build all your pages and start a local server on `http://localhost:7000`
+It'll start a local server on `http://localhost:7000`
 
 The project is deployed automatically to GitHub Pages on every push to "main". That means that in production it will automatically be deployed every time there is a change approved from a Pull Request.
