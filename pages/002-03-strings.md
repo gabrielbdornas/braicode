@@ -17,7 +17,7 @@ This way, they allow the programmer to write strings over multiple lines.
 If you print it out, you will notice that the output retains the line breaks. 
 
 If you need to use single quotes in your string, then wrap it in double quotes.
-Here's an example: imagine you wanted to create the string _Python's course for Beginners_.
+Here's an example: imagine you wanted to create the string `Python's course for Beginners`.
 To do that we need to add an apostrophe, like this:
 
 ````python
@@ -31,8 +31,8 @@ File "<stdin>", line 1
 SyntaxError: invalid syntax
 ```
 
-Above the "invalid syntax" error shows that our string starts in 'P' and then terminates in 'n'.
-All these characters that we have here after the second apostrophe (_s course for Beginners_) Python interpreter doesn't know what they are.
+Above the `invalid syntax` error shows that to Python our string started in `P` and  terminates in `n`.
+All these characters that we have here after the second apostrophe (`s course for Beginners`) Python interpreter doesn't know what they are.
 To solve this problem, we need to use double quotes to define our string, than we can have a single quote in the middle of it.
 
 ```python script
@@ -48,21 +48,20 @@ text: If you need single quotes inside a string use doble quotes to define it, b
 ## String Indexing and Slicing
 
 Now, let's look at other characteristics of strings in Python.
-I'm going to set the course variable name to _Python for Beginners_ and use square brackets to get the first character of it.
-To do that we use square brackets and type _0_:
+I'm going to set the `course` variable to `Python for Beginners` and type `0` inside square brackets to get the first character of it:
 
 ````python script
 course = 'Python for Beginners'
 print(course[0])
 ````
 
-Here, the **index** of the first character in this string is _0_.
-In other words, this is how Python strings are indexed: _0, 1, 2, 3_, etc.
-So, the index of the first character is _0_, the index of the second is _1_, and so on.
+Here, `0` is the **index** of the first character in `Python for Beginners`.
+The index of the first character  is `0`, the index of the second (`y`) is `1`, and so on.
+In other words, this is how Python strings are indexed: 0, 1, 2, 3, etc.
 
 ```yaml remark
 type: primary
-text: Python is zero-based
+text: Python uses zero-based indexing
 ```
 
 We can also use a negative index to get the characters started from the end.
