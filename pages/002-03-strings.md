@@ -18,7 +18,7 @@ If you print it out, you will notice that the output retains the line breaks.
 
 If you need to use single quotes in your string, then wrap it in double quotes.
 Here's an example: imagine you wanted to create the string _Python's course for Beginners_.
-So we want to add an apostrophe, like this:
+To do that we need to add an apostrophe, like this:
 
 ````python
 course = 'Python's course for Beginners'
@@ -31,7 +31,7 @@ File "<stdin>", line 1
 SyntaxError: invalid syntax
 ```
 
-Above the "invalid syntax" error because our string starts in 'P' and then terminates in 'n'.
+Above the "invalid syntax" error shows that our string starts in 'P' and then terminates in 'n'.
 All these characters that we have here after the second apostrophe (_s course for Beginners_) Python interpreter doesn't know what they are.
 To solve this problem, we need to use double quotes to define our string, than we can have a single quote in the middle of it.
 
@@ -48,7 +48,7 @@ text: If you need single quotes inside a string use doble quotes to define it, b
 ## String Indexing and Slicing
 
 Now, let's look at other characteristics of strings in Python.
-I'm going to set the course name to _Python for Beginners_ and use square brackets to get the first character of it.
+I'm going to set the course variable name to _Python for Beginners_ and use square brackets to get the first character of it.
 To do that we use square brackets and type _0_:
 
 ````python script
@@ -75,11 +75,8 @@ print(course[-1])
 ````
 
 If we pass negative 2, this will return the second character from the end (_r_).
-Okay? 
-So, please pay close attention to this square brackets syntax, because quite often it's the topic for online Python tests or university exams.
 
 We can also use a similar sintax to extract a few characters instead of one character and this is called slicing.
-I've been surprised how often I have needed to know how to do this in my day-to-day job.
 For example, if we type:
 
 ````python script
@@ -88,6 +85,7 @@ print(course[0:3])
 ````
 
 Python interpreter will return all the characters starting with _0_ all the way to _3_, but it does not return the character at the index _3_.
+
 We also have default values for the start and end index.
 If we don't supply the end index, Python will return all the characters to the end of the string:
 
@@ -131,6 +129,8 @@ course = 'Jane'
 print(course[1:-1])
 ````
 
+Pay close attention to this square brackets syntax, because quite often it's the topic for online Python tests or university exams, besides I've been surprised how often I have needed to know how to do this in my day-to-day job.
+
 ## Formatted Strings
 
 Formatted strings are particularly useful in situations where you dynamically generate some text with your variables.
@@ -139,7 +139,7 @@ Let's say we have two variables:
 first_name = 'Jane'
 last_name = 'Joplin'
 ````
-So let's say with these two variables, we want to generate some text like this:
+What if we want to generate some text with these two variables, like this:
 ````python
 first_name = 'Jane'
 last_name = 'Joplin'
@@ -155,17 +155,20 @@ message = first_name + ' [' + last_name + '] was a singer'
 print(message)
 ````
 While this approach perfectly works, it's not ideal because as our text gets more complicated it becomes harder to visualize the output.
-So someone else reading this code, they have to visualize all the string concatenations in their head.
+If someone else read this code, they have to visualize all the string concatenations in their head.
 **This is where we use formatted strings, they make it easier for us to visualize the output.**
 
-So, let's define another variable called _msg_, and set this to a formatted string.
-
-A formatted string is one that is prefixed with a _f_.
+Defining another variable called _msg_, and set this to a formatted string.
 
 ````python
 msg = f'{first_name} [{last_name}] was a singer'
 print(msg)
 ````
+
+```yaml remark
+type: primary
+text: A formatted string is one that is prefixed with a f.
+```
 With these curly braces, we're defining place holders or holes in our string, and when we run our program these holes will be filled with the value of our variables.
 So here we have 2 placeholders.
 
