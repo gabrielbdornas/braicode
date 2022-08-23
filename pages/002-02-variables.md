@@ -29,13 +29,13 @@ price = 10
 print(price)
 ```
 
-So this is how we define variables, we start with **an identifier which is the name of our variable**, then, an equal sign, and finally a value.
+So far we saw that to define variables we start with **an identifier which is the name of our variable**, then, an equal sign, and finally a value.
 More accurately, when this number 10 is about to be stored in the memory, first it will get converted to this binary form presentation.
 The number 10 is in the [decimal system](https://en.wikipedia.org/wiki/Decimal) which has all the digits from 0 to 9.
 Computers don't understand these digits, they only understand [bynary sistem](https://en.wikipedia.org/wiki/Binary_number), which is a bunch of 0's and 1's.
 So, to store the number 10 in the computer’s memory first will get [converted to its binary](https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/decimal-to-binary).
 
-Taking this program to the next level. Updating the value of this price variable to a new value, like 20, we should see 20 printed, because the Python interpreter executes our code line by line from the top.
+Updating the value of this price variable to a new value, like 20, we should see 20 printed, because the Python interpreter executes our code line by line from the top.
 
 ```python script
 price = 10
@@ -74,7 +74,7 @@ print(is_published)
 ```
 
 Note that booleans must be capitalized.
-Python will not understand if you spell it with a lowercase f or t an throw an error.
+Python will not understand an throw an error if you spell it with a lowercase f or t.
 
 ```Python
 Traceback (most recent call last):
@@ -91,7 +91,7 @@ Imagine we're going to write a program for a record company to check on a singer
 He's 20 years old and he is a new singer.
 I want you to define 3 variables.
 One for storing his name, the other for his age, and the last one to inform if he is a new or an existing singer.
-Them print this new variables.
+Them print this new variables on scream.
 
 Before checking it out below try to do it yourself.
 
@@ -162,7 +162,7 @@ John likes blue!
 
 Now, we're going to write a program that will ask about the current year and the year that we were born in.
 Then it will use these variables to calculate our age.
-As usual, we'll start with our input functions.
+We'll start with our input functions.
 The return values will be stored in variables called `current_year` and `birth_year` (remember to use underscore to separate multiple words).
 Next, we need to calculate the age, so we define another variable called `age`, and here we do some basic math like `age = current_year - birth_year`.
 Finally, print age variable.
@@ -176,7 +176,7 @@ print(age)
 
 ```yaml remark
 type: primary
-text: The age calculation above isn't 100% correct, but it's been used only to simplify the explanation of the topic..
+text: The age calculation above isn't 100% correct, but it's been used only to simplify the explanation of the topic.
 ```
 
 If we run our program as it is above we'll get the error below:
@@ -221,7 +221,7 @@ Considering the user's input `current_year = 2022` and `birth_year = 2000` the r
 ```
 
 So far you have learned about two built-in functions one is `print()` the other is `input()`.
-We have a few other functions for converting values into different types. We have `int()` for converting values into an integer, we also have `float()` to convertions into a float (a number with a decimal point).
+We have a few other functions for converting values into different types. We have `int()` for converting values into an integer, we also have `float()` to convert values into floats (numbers with decimal points).
 And we also have bool for converting numbers and strings into a boolean value.
 It's a good exercice to play around with this conversions functions, try it out!
 
@@ -268,13 +268,12 @@ Considering the user's input `weight_lbs = 100` the result `weight_kg` will be:
 ## Variable Names
 
 Officially, variable names in Python can be any length and can consist of uppercase and lowercase letters (A-Z, a-z), digits (0-9), and the underscore character (_).
-They are case-sensitive.
-Lowercase and uppercase letters are not the same.
+They are case-sensitive, which means that lowercase and uppercase letters are not the same.
 The Use of the underscore character is significant as well.
 An additional restriction is that, although a variable name can contain digits, the first character of a variable name cannot be a digit.
 It is worthwhile to give a variable a name that is descriptive enough to make clear what it is being used for.
 
-The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/), also known as PEP 8, contains [Naming Conventions](https://www.python.org/dev/peps/pep-0008/#naming-conventions) suggested snake case standards for variable names. This pattern ensures that words are lowercase and separated by underscores, as we're using here.
+The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/), also known as PEP 8, contains [Naming Conventions](https://www.python.org/dev/peps/pep-0008/#naming-conventions) suggesting [snake case](https://en.wikipedia.org/wiki/Snake_case) standards for variable names. This pattern ensures that words are lowercase and separated by underscores, as we're using here.
 
 The Python language reserves a small set of [keywords](https://realpython.com/python-variables/#reserved-words-keywords) that designate special language functionality.
 No object or variables can have the same name as a reserved word.
