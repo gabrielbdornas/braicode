@@ -4,6 +4,8 @@ blog:
   image: https://i.imgur.com/H8Rzxh7.png
 ---
 
+# Move GitHub issues between two repos
+
 I recently had to move a whole lot of GitHub issues between two repos before disabling them on the original one. Turns out that we signed for a LFS storage from GitHub, but after some time we realized that it wasn't necessary anymore. To my surprise the only way to disconnect my credit card was deleting the hole repository as mentioned in the [GitHub documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage#:~:text=To%20remove%20Git%20LFS%20objects%20from%20a%20repository%2C%20delete%20and%20recreate%20the%20repository)
 
 ```yaml remark
