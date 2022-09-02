@@ -16,13 +16,13 @@ index.html: index.md ## Build index.html file
 
 build-pages: $(PAGES_HTML_FILES) ## Build html page files
 
-$(PAGES_HTML_FILES): pages/%.html : pages/%.md index.html livemark.yaml
+$(PAGES_HTML_FILES): pages/%.html : pages/%.md index.md livemark.yaml
 	@echo 'Building pages/$*.html file from pages/$*.md...'
 	@livemark build $< --target $@ --config livemark.yaml
 
 build-blog: $(BLOG_HTML_FILES) ## Build html blog files
 
-$(BLOG_HTML_FILES): blog/%.html : blog/%.md index.html livemark.yaml
+$(BLOG_HTML_FILES): blog/%.html : blog/%.md index.md livemark.yaml
 	@echo 'Building blog/$*.html file from blog/$*.md...'
 	@livemark build $< --target $@ --config livemark.yaml
 
