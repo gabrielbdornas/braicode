@@ -33,4 +33,4 @@ clean: ## Clean html pages
 	@rm -rf blog/*.html
 
 start: ## Start livemark server
-	@livemark start
+	@livemark start --config livemark.yaml
