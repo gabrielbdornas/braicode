@@ -1,4 +1,4 @@
-.PHONY: help build build-pages build-blog clean start
+.PHONY: help build build-pages build-blog clean-blog-index clean start
 
 PAGES_MD_FILES= $(wildcard pages/*.md)
 PAGES_HTML_FILES= $(patsubst pages/%.md, pages/%.html, $(PAGES_MD_FILES))
@@ -8,7 +8,7 @@ BLOG_HTML_FILES= $(patsubst blog/%.md, blog/%.html, $(BLOG_MD_FILES))
 help: ## Short description of the commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-build: index.html build-pages build-blog
+build: index.html build-pages clean-blog-index build-blog
 
 index.html: index.md livemark.yaml ## Build index.html file
 	@echo 'Building index.html file from index.md...'
@@ -25,6 +25,10 @@ build-blog: $(BLOG_HTML_FILES) ## Build html blog files
 $(BLOG_HTML_FILES): blog/%.html : blog/%.md livemark.yaml
 	@echo 'Building blog/$*.html file from blog/$*.md...'
 	@livemark build $< --target $@ --config livemark.yaml
+
+clean-blog-index: ## Clean blog/index.html page
+	@echo 'Cleaning blog/index.html page'
+	@rm -rf blog/index.html
 
 clean: ## Clean html pages
 	@echo 'Cleaning html pages'
