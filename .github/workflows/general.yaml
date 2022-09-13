@@ -8,6 +8,7 @@ on:
       - 'pages/*.md'
       - 'blog/*.md'
       - 'build.sh'
+      - 'Makefile'
 
 jobs:
 
