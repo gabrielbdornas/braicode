@@ -1,7 +1,7 @@
 ---
 blog:
   author: Gabriel Braico Dornas
-  image: https://i.imgur.com/H8Rzxh7.png
+  image: https://imgur.com/iJ2Ihof
 ---
 
 # Move GitHub issues between two repos
