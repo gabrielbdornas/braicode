@@ -48,3 +48,7 @@ $ make start
 It'll start a local server on `http://localhost:7000`
 
 The project is deployed automatically to GitHub Pages on every push to "main". That means that in production it will automatically be deployed every time there is a change approved from a Pull Request.
+
+## Blog Images
+
+We're using [imgur website](https://imgur.com/) to host our images, specially from the blog post section.
