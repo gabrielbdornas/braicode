@@ -8,7 +8,7 @@ BLOG_HTML_FILES= $(patsubst blog/%.md, blog/%.html, $(BLOG_MD_FILES))
 help: ## Short description of the commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-build: index.html build-pages clean-blog-index build-blog
+build: clean index.html build-pages clean-blog-index build-blog
 
 index.html: index.md livemark.yaml ## Build index.html file
 	@echo 'Building index.html file from index.md...'
