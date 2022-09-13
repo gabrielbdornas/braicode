@@ -36,4 +36,8 @@ All this will do is grab the last 500 issues from the original repo and **transf
 
 So far so good after that I could purge my original repo and remove LFS storage from GitHub. **Be careful and remember that when you delete a repository stars and forks are also deleted, it wasn't my case but could be yours. If so, search for complementary solutions before blindly removing your repo.**
 
-Enjoy
+Enjoy!!
+
+## References
+
+- [Github Documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage#removing-a-single-file)
