@@ -51,4 +51,4 @@ The project is deployed automatically to GitHub Pages on every push to "main". T
 
 ## Blog Images
 
-We're using [imgur website](https://imgur.com/) to host our images, specially from the blog post section.
+We're using [imgur website](https://imgur.com/) to host our images, specially from the blog post section. Remember to use `.png` at the end of the imgur image link.
