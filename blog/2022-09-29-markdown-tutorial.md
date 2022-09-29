@@ -8,20 +8,18 @@ blog:
 
 Markdown is a markup language for writing simple formatted documents without having to use a GUI to designate text as bold, italics, etc. 
 This is great for writing documents quickly without losing time reaching for a mouse and writing formatted content across many platforms in a standard way.
-But if your not sure how to do something with markdown, you can also use HTML.
 
 Use Cases for Markdown:
 
-- Can be used to write documentation on github.com and similar platforms like [HackMD - Online Markdown Editor](https://hackmd.io/). 
-(as .md files, the main page of a repo is always a readme.md file);
+- Can be used to write documentation on [GitHub](https://github.com) and similar platforms like [HackMD - Online Markdown Editor](https://hackmd.io/);
 - Can be used in slack/discord messages to quickly create code snippets and bold text;
 - Can be used in writing content on collaboration tools like Notion/Trello/Asana;
 - Can be used in notetaking apps like Boostnote and Obsidian;
-- Can be used to format text on social networks like reddit;
-- Can be used for content writing with most static site generators;
-- Can be used to write online documents in plataforns like 
+- Can be used to format text on social networks like reddit; and
+- Can be used for content writing with most static site generators, as [livemark](https://livemark.frictionlessdata.io/), used in this blog
 
 In review, learning how to write content using markdown is a skills that opens up new possibilities in the tools you are probably already using making your life easier and more productive.
+You can even use HTML if you're not sure how to do something with markdown.
 
 ## How to Write Markdown
 
@@ -63,6 +61,7 @@ Tables are written like so…
 |----------|----------|
 | Some Info | Some Info 2 |
 | More Info | More Info 2 |
+| More Info | More Info 2 |
 ```
 
 And the result wil be:
@@ -70,6 +69,7 @@ And the result wil be:
 | Column 1 | Column 2 |
 |----------|----------|
 | Some Info | Some Info 2 |
+| More Info | More Info 2 |
 | More Info | More Info 2 |
 
 ### Bold and italic text
@@ -102,6 +102,10 @@ Images are created using `![]()` sintaxe, pretty similar to URL links, isn`t it:
 ```
 ![Markdown Image](https://imgur.com/NZifdP0.png)
 ```
+
+And the result wil be:
+
+![Markdown Image](https://imgur.com/NZifdP0.png)
 
 ## Conclusion
 
