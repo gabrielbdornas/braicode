@@ -1,7 +1,7 @@
 ---
 blog:
   author: Gabriel Braico Dornas
-  image: https://imgur.com/NZifdP0.png
+  image: https://imgur.com/RTgk3lS.png
 ---
 
 # Why Everybody Should Master Markdown
@@ -100,12 +100,12 @@ And the result wil be:
 Images are created using `![]()` sintaxe, pretty similar to URL links, isn`t it:
 
 ```
-![Markdown Image](https://imgur.com/NZifdP0.png)
+![Markdown Image](https://imgur.com/RTgk3lS.png)
 ```
 
 And the result wil be:
 
-![Markdown Image](https://imgur.com/NZifdP0.png)
+![Markdown Image](https://imgur.com/RTgk3lS.png)
 
 ## Conclusion
 
