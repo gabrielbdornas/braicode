@@ -6,7 +6,7 @@ blog:
 
 # Why Everybody Should Master Markdown
 
-Markdown is a markup language for writing simple formatted documents without having to use a GUI to designate text as bold, italics, etc. 
+Markdown is a markup language for writing simple formatted documents without having to use a [Graphical User Interface - GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) to designate text as bold, italics, etc. 
 This is great for writing documents quickly without losing time reaching for a mouse and writing formatted content across many platforms in a standard way.
 
 Use Cases for Markdown:
@@ -64,7 +64,7 @@ Tables are written like so…
 | More Info | More Info 2 |
 ```
 
-And the result wil be:
+And the result will be:
 
 | Column 1 | Column 2 |
 |----------|----------|
@@ -74,13 +74,13 @@ And the result wil be:
 
 ### Bold and italic text
 
-Bold italic are written by wrapping text in asterisks, two for bold and one for italic respectivaly:
+Bold italic are written by wrapping text in asterisks, two for bold and one for italic respectively:
 
 ```
 How about some **bold** or *italic* text?
 ```
 
-And the result wil be:
+And the result will be:
 
 How about some **bold** or *italic* text?
 
@@ -91,22 +91,29 @@ URL links are created using `[]()` sintaxe:
 ```
 [Gabriel Dornas Github Account](https://github/gabrielbdornas)
 ```
-And the result wil be:
+And the result will be:
 
 [Gabriel Dornas Github Account](https://github/gabrielbdornas)
 
 ### Images
 
-Images are created using `![]()` sintaxe, pretty similar to URL links, isn`t it:
+Images are created using `![]()` sintaxe, pretty similar to URL links, isn't it:
 
 ```
 ![Markdown Image](https://imgur.com/RTgk3lS.png)
 ```
 
-And the result wil be:
+Inside the parentheses we have to pass the image link or local address. 
+
+And the result will be:
 
 ![Markdown Image](https://imgur.com/RTgk3lS.png)
+
+```yaml remark
+type: success
+text: https://imgur.com/ is a good place to host online images.
+```
 
 ## Conclusion
 
-Markdown is very easy to use and its portability and convienience can help maximize your productivity!
+Markdown is very easy to use and its portability and convenience can help maximize your productivity!
