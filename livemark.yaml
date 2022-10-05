@@ -21,6 +21,6 @@ pages:
         - path: pages/002-02-variables
         - path: pages/002-03-strings
     - path: blog/index
-    - path: presentations/index
+    - path: pages/presentations
     - path: pages/contrib
     
