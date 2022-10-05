@@ -38,3 +38,5 @@ clean: ## Clean html pages
 
 start: ## Start livemark server
 	@livemark start --config livemark.yaml
+
+# darkslide presentations/20221004-mkdocs.md -d presentations/test.html --embed
