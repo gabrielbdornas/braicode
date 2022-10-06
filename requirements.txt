@@ -5,3 +5,4 @@ black==22.6.0
 ipython==8.4.0
 ipdb==0.13.9
 livemark==0.92
+darkslide==6.0.0
