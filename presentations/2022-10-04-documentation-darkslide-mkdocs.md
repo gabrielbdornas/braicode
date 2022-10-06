@@ -8,7 +8,8 @@ Generate HTML5 slideshows from markdown, ReST, or textile.
 
 ![python](http://i.imgur.com/bc2xk.png)
 
-Darkslide is primarily written in Python, but it's themes use:
+
+[Darkslide](https://pypi.org/project/darkslide/) is primarily written in Python, but it's themes use:
 
 - HTML5
 - Javascript
