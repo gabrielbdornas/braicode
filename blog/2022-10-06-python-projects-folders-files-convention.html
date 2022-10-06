@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Markdown is a markup language for writing simple formatted documents without having to use a  Graphical User Interface - GUI  to designate text as bold, italics, etc.">
-<meta name="keywords" content="why,everybody,should,master,markdown">
+<meta name="description" content="As I started to build a  Python Project Template  to boost my development process a really good question came up.">
+<meta name="keywords" content="my,conventions,to,python,projects,,folders,and,file,naming">
 <link rel="icon" href="../assets/favicon.ico">
-<title>Why Everybody Should Master Markdown | Braicode</title>
+<title>My conventions to python projects, folders and file naming | Braicode</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1753,115 +1753,64 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-main">
 <div id="livemark-notes">
-      <a href="https://github.com/gabrielbdornas/braicode/edit/main/blog/2022-09-29-markdown-tutorial.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+      <a href="https://github.com/gabrielbdornas/braicode/edit/main/blog/2022-10-06-python-projects-folders-files-convention.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
     (2022-10-06 20:05)
 </div>
 
-<h1>Why Everybody Should Master Markdown</h1>
+<h1>My conventions to python projects, folders and file naming</h1>
 <p>
 <p id="livemark-blog-info">
-  <strong>By Gabriel Braico Dornas on 2022-09-29</strong> »
+  <strong>By Gabriel Braico Dornas on 2022-10-06</strong> »
   <a href="index.html">Blog Index</a>
-</p>Markdown is a markup language for writing simple formatted documents without having to use a <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">Graphical User Interface - GUI</a> to designate text as bold, italics, etc.
-This is great for writing documents quickly without losing time reaching for a mouse and writing formatted content across many platforms in a standard way.</p>
-<p>Use Cases for Markdown:</p>
+</p>As I started to build a <a href="https://github.com/gabrielbdornas/python-project-template">Python Project Template</a> to boost my development process a really good question came up.
+What's the naming convention in the Python community to set names for project folders (and subfolders) and files?
+Should we use hyphens, underscores, or both?</p>
+<p><a href="https://developers.google.com/style/filenames">Google developer documentation style guide</a> said that hyphens are the best option to separate words.</p>
+<blockquote>
+<p>Make file and directory names lowercase. Use hyphens, not underscores, to separate words—for example, query-data.html. Use only standard ASCII alphanumeric characters in file and directory names.
+Don't use generic page names such as document1.html.</p>
+</blockquote>
+<p><a href="https://peps.python.org/pep-0008/#package-and-module-names">PEP8</a> defines a standard for how to name packages and modules:</p>
+<blockquote>
+<p>Modules should have short, all-lowercase names. Underscores can be used in the module name if it improves readability. Python packages should also have short, all-lowercase names, although the use of underscores is discouraged.</p>
+</blockquote>
+<p>This <a href="https://medium.com/@maddendan/hyphens-vs-underscores-in-file-names-295025782912">Medium Post</a> suggests using both hyphens and underscores to split "entities" in file names.</p>
+<p>But now, what to do?</p>
+<p>My solution to choosing one pattern was to search how real python projects are built.
+Just to show fill examples, the repositories <a href="https://github.com/python/miss-islington">miss-islington</a>, <a href="https://github.com/corydolphin/flask-cors">flask-cors</a>, and <a href="https://github.com/frictionlessdata/frictionless-ckan-mapper">frictionless-ckan-mapper</a> share the same pattern suggested in <a href="https://stackoverflow.com/a/59896341/11755155">this StackOverflow post</a>:</p>
 <ul>
-<li>Can be used to write documentation on <a href="https://github.com">GitHub</a> and similar platforms like <a href="https://hackmd.io/">HackMD - Online Markdown Editor</a>;</li>
-<li>Can be used in slack/discord messages to quickly create code snippets and bold text;</li>
-<li>Can be used in writing content on collaboration tools like Notion/Trello/Asana;</li>
-<li>Can be used in notetaking apps like Boostnote and Obsidian;</li>
-<li>Can be used to format text on social networks like reddit; and</li>
-<li>Can be used for content writing with most static site generators, as <a href="https://livemark.frictionlessdata.io/">livemark</a>, used in this blog</li>
+<li>All lowercase.</li>
+<li>The repository should use the same name as the package, except that the repository substitutes hyphens for underscores.</li>
+<li>Only standard ASCII alphanumeric characters in file and directory names.</li>
 </ul>
-<p>In review, learning how to write content using markdown is a skills that opens up new possibilities in the tools you are probably already using making your life easier and more productive.
-You can even use HTML if you're not sure how to do something with markdown.</p>
-<h2>How to Write Markdown</h2>
-<p>Whether in a <code>.md</code> file or on any of the previously mentioned platforms that support markdown, all you have to do is just start writing markdown and it will just work.</p>
-<h3>Heading</h3>
-<p>There are six sizes of headings.</p>
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>HEADING LEVEL 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
-<p>This is as simple as writing the following:</p>
-<pre><code># Heading Level 1
-## Heading Level 2
-### Heading Level 3
-#### Heading Level 4
-##### Heading Level 5
-###### Heading Level 6
+<p>The suggested structure is shown below:</p>
+<pre><code>repository-name/
+├── repository_name
+│   ├── __init__.py
+│   ├── __main__.py
+├── README.md
 </code></pre>
-<div class="livemark-remark">
-  <div class="alert alert-success" role="alert">
-    That nice code-block above is done by wrapping text in three backticks (```) before and after the code-block.
-  </div>
-</div><h3>Table</h3>
-<p>Tables are written like so…</p>
-<pre><code>| Column 1 | Column 2 |
-|----------|----------|
-| Some Info | Some Info 2 |
-| More Info | More Info 2 |
-| More Info | More Info 2 |
-</code></pre>
-<p>And the result will be:</p>
-<table>
-<thead>
-<tr>
-<th>Column 1</th>
-<th>Column 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Some Info</td>
-<td>Some Info 2</td>
-</tr>
-<tr>
-<td>More Info</td>
-<td>More Info 2</td>
-</tr>
-<tr>
-<td>More Info</td>
-<td>More Info 2</td>
-</tr>
-</tbody></table><h3>Bold and italic text</h3>
-<p>Bold italic are written by wrapping text in asterisks, two for bold and one for italic respectively:</p>
-<pre><code>How about some **bold** or *italic* text?
-</code></pre>
-<p>And the result will be:</p>
-<p>How about some <strong>bold</strong> or <em>italic</em> text?</p>
-<h3>URL links</h3>
-<p>URL links are created using <code>[]()</code> sintaxe:</p>
-<pre><code>[Gabriel Dornas Github Account](https://github/gabrielbdornas)
-</code></pre>
-<p>And the result will be:</p>
-<p><a href="https://github/gabrielbdornas">Gabriel Dornas Github Account</a></p>
-<h3>Images</h3>
-<p>Images are created using <code>![]()</code> sintaxe, pretty similar to URL links, isn't it:</p>
-<pre><code>![Markdown Image](https://imgur.com/RTgk3lS.png)
-</code></pre>
-<p>Inside the parentheses we have to pass the image link or local address. </p>
-<p>And the result will be:</p>
-<p><img src="https://imgur.com/RTgk3lS.png" alt="Markdown Image"></p>
-<div class="livemark-remark">
-  <div class="alert alert-success" role="alert">
-    https://imgur.com/ is a good place to host online images.
-  </div>
-</div><h2>Conclusion</h2>
-<p>Markdown is very easy to use and its portability and convenience can help maximize your productivity!</p>
+<p>Next steps? It's time to fully implement the convention in my <a href="https://github.com/gabrielbdornas/python-project-template">Python Project Template</a>, both in documentation and testing to ensure that it'll be applied.</p>
+<h2>References</h2>
+<ul>
+<li>
+<p><a href="https://github.com/dados-mg/issues/issues/57">DTA convention discussion</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/52827722/folder-naming-convention-for-python-projects">StackOverflow - Folder naming convention for python projects</a></p>
+</li>
+</ul>
 
 <div id="livemark-signs">
   <div>
         <div class="next">
-      <a href="2022-10-06-python-projects-folders-files-convention.html">
-        My conventions to python projects, folders and file naming »
+      <a href="2022-07-04-github-pages-custom-domain-configuration.html">
+        GitHub Pages Custom Domain Configuration »
       </a>
     </div>
             <div class="prev">
-      <a href="../pages/contrib.html">
-        « Contribute
+      <a href="2022-09-29-markdown-tutorial.html">
+        « Why Everybody Should Master Markdown
       </a>
     </div>
       </div>
