@@ -23,7 +23,7 @@ You can even use HTML if you're not sure how to do something with markdown.
 
 ## How to Write Markdown
 
-Whether in a `.md` file or on any of the previously mentioned platforms that support markdown, all you have to do is just start writing markdown and it will just work.
+Whether in a `.md` file or on any of the previously mentioned platforms that support markdown, all you have to do is just start writing markdown and it will just work for the [basic syntax](https://www.markdownguide.org/basic-syntax).
 
 ### Heading
 
@@ -51,26 +51,6 @@ This is as simple as writing the following:
 type: success
 text: That nice code-block above is done by wrapping text in three backticks (```) before and after the code-block.
 ```
-
-### Table
-
-Tables are written like so…
-
-```
-| Column 1 | Column 2 |
-|----------|----------|
-| Some Info | Some Info 2 |
-| More Info | More Info 2 |
-| More Info | More Info 2 |
-```
-
-And the result will be:
-
-| Column 1 | Column 2 |
-|----------|----------|
-| Some Info | Some Info 2 |
-| More Info | More Info 2 |
-| More Info | More Info 2 |
 
 ### Bold and italic text
 
@@ -114,6 +94,33 @@ type: success
 text: https://imgur.com/ is a good place to host online images.
 ```
 
+### Extended Markdown
+
+As you can see, the basic syntax have many of the elements needed on a day-to-day basis, but it wasn’t enough for some people. 
+That’s where [extended syntax](https://www.markdownguide.org/extended-syntax/#fnref:bignote) comes in.
+Not all Markdown applications support extended syntax elements. 
+A good example of this is table syntax. They are written like so…
+
+```
+|   Column 1  |   Column 2  |
+|-------------|-------------|
+| Some Info 1 | More Info 1 |
+| Some Info 2 | More Info 2 |
+| Some Info 3 | More Info 3 |
+```
+
+And the result will be:
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Some Info | Some Info 2 |
+| More Info | More Info 2 |
+| More Info | More Info 2 |
+
+You will need to check whether or not the lightweight markup language your application is using supports the extended syntax elements you want to use.
+If it doesn’t, it may still be possible to enable extensions in your Markdown processor.
+
 ## Conclusion
 
 Markdown is very easy to use and its portability and convenience can help maximize your productivity!
+Most of the time, the basic syntax will be enough, but if necessary, check out the Extended Markdown syntax and its extensions installation.
