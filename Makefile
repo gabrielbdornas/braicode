@@ -32,7 +32,6 @@ build-presentations: $(PRESENTATIONS_HTML_FILES) ## Build html presentations fil
 
 $(PRESENTATIONS_HTML_FILES): presentations/%.html : presentations/%.md livemark.yaml
 	@echo 'Building presentations/$*.html file from presentations/$*.md...'
-	@livemark build $< --target $@ --config livemark.yaml
 	@darkslide $< -d $@ --embed
 
 clean-blog-index: ## Clean blog/index.html page
