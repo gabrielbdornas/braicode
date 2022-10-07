@@ -1,4 +1,4 @@
-.PHONY: help build build-pages build-blog clean-blog-index clean start
+.PHONY: help build build-pages build-blog clean-blog-index build-presentations clean start
 
 PAGES_MD_FILES= $(wildcard pages/*.md)
 PAGES_HTML_FILES= $(patsubst pages/%.md, pages/%.html, $(PAGES_MD_FILES))
