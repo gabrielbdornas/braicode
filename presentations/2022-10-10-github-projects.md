@@ -50,7 +50,6 @@
 		- ⌚ Client Validation.
 		- ✔ Done.
 
-
 ---
 
 # Mão na massa
