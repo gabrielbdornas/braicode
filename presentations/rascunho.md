@@ -1,4 +1,6 @@
-# MkDocs
+# GitHub Projects
+
+---
 
 - Overview e depois começar a ir para o específico
 
@@ -39,18 +41,9 @@ experiência
 	- mostrar andamento para time mais fácil
 
 - Criar projeto olá mundo para simplificar a demonstração do projeto
-	- listar issues:
-		- criar arquivo readme.md
-		- criar arquivo gitignore para projetos python
-		- criar pasta projeto/pacote com código olá mundo
-		- criar teste
+
 	- criar projeto dentro do repositório:
-		- Colunas:
-			- status (Personalizar),
-			- assignee,
-			- linkde pull request
-			- milestone
-			- labels
+
 		- Mostrar estrutura de linhas e kanban
 		- url mostrada para todos 
 
@@ -68,3 +61,5 @@ experiência
 https://www.youtube.com/watch?v=vxYTpsFKdiQ
 
 https://www.youtube.com/watch?v=SI1ra-XHWHM
+
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project
