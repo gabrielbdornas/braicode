@@ -124,3 +124,9 @@ If it doesn’t, it may still be possible to enable extensions in your Markdown 
 
 Markdown is very easy to use and its portability and convenience can help maximize your productivity!
 Most of the time, the basic syntax will be enough, but if necessary, check out the Extended Markdown syntax and its extensions installation.
+
+## References
+
+- [Markdown Monster Documentation](https://markdownmonster.west-wind.com/docs/_4ne1eu2cq.htm)
+
+- [GitHub Reference](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
