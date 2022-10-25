@@ -1453,7 +1453,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              1/9
+              1/14
             </aside>
           </footer>
         </div>
@@ -1494,7 +1494,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              2/9
+              2/14
             </aside>
           </footer>
         </div>
@@ -1538,7 +1538,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              3/9
+              3/14
             </aside>
           </footer>
         </div>
@@ -1588,7 +1588,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              4/9
+              4/14
             </aside>
           </footer>
         </div>
@@ -1639,7 +1639,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              5/9
+              5/14
             </aside>
           </footer>
         </div>
@@ -1654,20 +1654,28 @@ pre { background: #fdf6e3; color: #586e75; }
             
             
             <section><h3>Instalação:</h3>
-<div class="highlight"><pre><span></span><span class="linenos">1</span>  pip install darkslide
-</pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span>  pip install darkslide
+</pre></div></td></tr></table></div>
 
 <h3>Formatação:</h3>
-<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="gh"># First Slide</span>
-<span class="linenos">2</span>
-<span class="linenos">3</span>First Slide text
-<span class="linenos">4</span>
-<span class="linenos">5</span>---
-<span class="linenos">6</span>
-<span class="linenos">7</span><span class="gh"># First Slide</span>
-<span class="linenos">8</span>
-<span class="linenos">9</span>First Slide text
-</pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><span class="gh"># First Slide</span>
+
+First Slide text
+
+---
+
+<span class="gh"># First Slide</span>
+
+First Slide text
+</pre></div></td></tr></table></div>
 
 <ul>
 <li>To create a title slide, render a single h1 element (eg. # My Title)</li>
@@ -1690,7 +1698,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              6/9
+              6/14
             </aside>
           </footer>
         </div>
@@ -1705,10 +1713,12 @@ pre { background: #fdf6e3; color: #586e75; }
             
             
             <section><h3>Rendering:</h3>
-<div class="highlight"><pre><span></span><span class="linenos">1</span>  darkslide --help
-<span class="linenos">2</span>
-<span class="linenos">3</span>  darkslide slides.md
-</pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span>  darkslide --help
+
+  darkslide slides.md
+</pre></div></td></tr></table></div>
 
 <p>Enjoy your newly generated presentation.html</p></section>
             
@@ -1727,7 +1737,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              7/9
+              7/14
             </aside>
           </footer>
         </div>
@@ -1744,17 +1754,26 @@ pre { background: #fdf6e3; color: #586e75; }
             <section><h3>Publishing your Presentation</h3>
 <p>Use <a href="https://github.com/gabrielbdornas/python-project-template">Python Project Template</a></p>
 <p>Use <a href="https://www.gnu.org/software/make/manual/make.html">Makefile</a></p>
-<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nf">.PHONY</span><span class="o">:</span> <span class="n">build</span>-<span class="n">presentation</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="nv">PRESENTATIONS_MD_FILES</span><span class="o">=</span> <span class="k">$(</span>wildcard presentations/*.md<span class="k">)</span>
-<span class="linenos"> 4</span><span class="nv">PRESENTATIONS_HTML_FILES</span><span class="o">=</span> <span class="k">$(</span>patsubst presentations/%.md, presentations/%.html, <span class="k">$(</span>PRESENTATIONS_MD_FILES<span class="k">))</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="nf">build-presentations</span><span class="o">:</span> <span class="k">$(</span><span class="nv">PRESENTATIONS_HTML_FILES</span><span class="k">)</span> <span class="c">## Build html presentations files</span>
-<span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="nf">$(PRESENTATIONS_HTML_FILES)</span><span class="o">:</span> <span class="n">presentations</span>/%.<span class="n">html</span> : <span class="n">presentations</span>/%.<span class="n">md</span> <span class="n">livemark</span>.<span class="n">yaml</span>
-<span class="linenos"> 9</span>    @echo <span class="s1">&#39;Building presentations/$*.html file from presentations/$*.md...&#39;</span>
-<span class="linenos">10</span>    @darkslide $&lt; -d <span class="nv">$@</span> --embed
-</pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><span class="nf">.PHONY</span><span class="o">:</span> <span class="n">build</span>-<span class="n">presentation</span>
+
+<span class="nv">PRESENTATIONS_MD_FILES</span><span class="o">=</span> <span class="k">$(</span>wildcard presentations/*.md<span class="k">)</span>
+<span class="nv">PRESENTATIONS_HTML_FILES</span><span class="o">=</span> <span class="k">$(</span>patsubst presentations/%.md, presentations/%.html, <span class="k">$(</span>PRESENTATIONS_MD_FILES<span class="k">))</span>
+
+<span class="nf">build-presentations</span><span class="o">:</span> <span class="k">$(</span><span class="nv">PRESENTATIONS_HTML_FILES</span><span class="k">)</span> <span class="c">## Build html presentations files</span>
+
+<span class="nf">$(PRESENTATIONS_HTML_FILES)</span><span class="o">:</span> <span class="n">presentations</span>/%.<span class="n">html</span> : <span class="n">presentations</span>/%.<span class="n">md</span> <span class="n">livemark</span>.<span class="n">yaml</span>
+    @echo <span class="s1">&#39;Building presentations/$*.html file from presentations/$*.md...&#39;</span>
+    @darkslide $&lt; -d <span class="nv">$@</span> --embed
+</pre></div></td></tr></table></div>
 </section>
             
           </div>
@@ -1772,7 +1791,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              8/9
+              8/14
             </aside>
           </footer>
         </div>
@@ -1783,7 +1802,231 @@ pre { background: #fdf6e3; color: #586e75; }
         <div class="slide slide-9">
           <div class="inner">
             
-            <header><h1>MkDocs</h1></header>
+            <header><h1>MkDocs - Arquitetura</h1></header>
+            
+            
+            <section><p><img alt="estrutura_makdocs" src="https://imgur.com/AHqy2zu.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="presentations/2022-10-04-documentation-darkslide-mkdocs.md">presentations/2022-10-04-documentation-darkslide-mkdocs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentations/2022-10-04-documentation-darkslide-mkdocs.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>MkDocs - Comandos</h1></header>
+            
+            
+            <section><ul>
+<li><code>--help</code>: Ajuda.</li>
+<li><code>new</code>: Para criar um projeto.</li>
+<li><code>build</code>: Conversão md para html.</li>
+<li><code>serve</code>: Live server.</li>
+<li><code>gh-deploy</code>: Deploy automático no GitHub</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="presentations/2022-10-04-documentation-darkslide-mkdocs.md">presentations/2022-10-04-documentation-darkslide-mkdocs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentations/2022-10-04-documentation-darkslide-mkdocs.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-11">
+          <div class="inner">
+            
+            <header><h1>MkDocs - Instalação</h1></header>
+            
+            
+            <section><p>Pacotes necessários: mkdocs, pymdown-extensions</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><span class="gh"># Arquivo mkdoc.yml</span>
+
+<span class="gh"># theme:</span>
+  # name: readthedocs
+
+markdown_extensions:
+  <span class="k">-</span> pymdownx.tasklist   
+  <span class="k">-</span> pymdownx.emoji
+  <span class="k">-</span> pymdownx.mark      # Realçado
+  <span class="k">-</span> pymdownx.tilde     # Tachado
+  <span class="k">-</span> pymdownx.highlight # Superfences
+    custom_fences:
+    <span class="k">-</span> name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  <span class="k">-</span> https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  <span class="k">-</span> https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+</pre></div></td></tr></table></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="presentations/2022-10-04-documentation-darkslide-mkdocs.md">presentations/2022-10-04-documentation-darkslide-mkdocs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentations/2022-10-04-documentation-darkslide-mkdocs.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-12">
+          <div class="inner">
+            
+            <header><h1>MkDocs - Tema Material</h1></header>
+            
+            
+            <section><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span>theme:
+  name: material
+  palette:
+    <span class="k">-</span> scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    <span class="k">-</span> scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+</pre></div></td></tr></table></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="presentations/2022-10-04-documentation-darkslide-mkdocs.md">presentations/2022-10-04-documentation-darkslide-mkdocs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentations/2022-10-04-documentation-darkslide-mkdocs.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>MkDocs - Let's Go Live</h1></header>
+            
+            
+            <section><h2>mkdocs gh-deploy</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="presentations/2022-10-04-documentation-darkslide-mkdocs.md">presentations/2022-10-04-documentation-darkslide-mkdocs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentations/2022-10-04-documentation-darkslide-mkdocs.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            <header><h1>Mkdocs e Darkslide</h1></header>
             
             
           </div>
@@ -1801,7 +2044,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              9/9
+              14/14
             </aside>
           </footer>
         </div>
@@ -1870,8 +2113,38 @@ pre { background: #fdf6e3; color: #586e75; }
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide:9">MkDocs</a></th>
+        <th><a href="#slide:9">MkDocs - Arquitetura</a></th>
         <td><a href="#slide:9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide:10">MkDocs - Comandos</a></th>
+        <td><a href="#slide:10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide:11">MkDocs - Instalação</a></th>
+        <td><a href="#slide:11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide:12">MkDocs - Tema Material</a></th>
+        <td><a href="#slide:12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide:13">MkDocs - Let's Go Live</a></th>
+        <td><a href="#slide:13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide:14">Mkdocs e Darkslide</a></th>
+        <td><a href="#slide:14">14</a></td>
       </tr>
       
       
