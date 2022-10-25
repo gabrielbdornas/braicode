@@ -122,4 +122,77 @@ Use [Makefile](https://www.gnu.org/software/make/manual/make.html)
 
 ---
 
-# MkDocs
+# MkDocs - Arquitetura
+
+![estrutura_makdocs](https://imgur.com/AHqy2zu.png)
+
+--- 
+
+# MkDocs - Comandos
+
+- `--help`: Ajuda.
+- `new`: Para criar um projeto.
+- `build`: Conversão md para html.
+- `serve`: Live server.
+- `gh-deploy`: Deploy automático no GitHub
+
+--- 
+
+# MkDocs - Instalação
+
+Pacotes necessários: mkdocs, pymdown-extensions
+
+    !Markdown
+    # Arquivo mkdoc.yml
+
+    # theme:
+      # name: readthedocs
+
+    markdown_extensions:
+      - pymdownx.tasklist   
+      - pymdownx.emoji
+      - pymdownx.mark      # Realçado
+      - pymdownx.tilde     # Tachado
+      - pymdownx.highlight # Superfences
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+    extra_css:
+      - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+    extra_javascript:
+      - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
+---
+
+# MkDocs - Tema Material
+
+    !Markdown
+    theme:
+      name: material
+      palette:
+        - scheme: default
+          toggle:
+            icon: material/weather-night
+            name: Modo noturno
+        - scheme: slate
+          toggle:
+            icon: material/weather-sunny
+            name: Modo claro
+
+--- 
+
+# MkDocs - Let's Go Live
+
+
+## mkdocs gh-deploy
+
+---
+
+# Mkdocs e Darkslide
+
+
+
+
+
