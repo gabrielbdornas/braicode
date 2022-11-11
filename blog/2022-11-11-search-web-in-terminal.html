@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="As I started to build a  Python Project Template  to boost my development process a really good question came up.">
-<meta name="keywords" content="my,conventions,to,python,projects,,folders,and,file,naming">
+<meta name="description" content="The function sample provided here will use  google-chrome CLI  and we’re assuming that you are using bash as your shell (if you're using zsh you could use the  zshrc  file).">
+<meta name="keywords" content="use,terminal,to,search,the,web">
 <link rel="icon" href="../assets/favicon.ico">
-<title>My conventions to python projects, folders and file naming | Braicode</title>
+<title>Use terminal to search the web | Braicode</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1753,64 +1753,56 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-main">
 <div id="livemark-notes">
-      <a href="https://github.com/gabrielbdornas/braicode/edit/main/blog/2022-10-06-python-projects-folders-files-convention.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+      <a href="https://github.com/gabrielbdornas/braicode/edit/main/blog/2022-11-11-search-web-in-terminal.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
     (2022-11-11 19:21)
 </div>
 
-<h1>My conventions to python projects, folders and file naming</h1>
+<h1>Use terminal to search the web</h1>
 <p>
 <p id="livemark-blog-info">
-  <strong>By Gabriel Braico Dornas on 2022-10-06</strong> »
+  <strong>By Gabriel Braico Dornas on 2022-11-11</strong> »
   <a href="index.html">Blog Index</a>
-</p>As I started to build a <a href="https://github.com/gabrielbdornas/python-project-template">Python Project Template</a> to boost my development process a really good question came up.
-What's the naming convention in the Python community to set names for project folders (and subfolders) and files?
-Should we use hyphens, underscores, or both?</p>
-<p><a href="https://developers.google.com/style/filenames">Google developer documentation style guide</a> said that hyphens are the best option to separate words.</p>
-<blockquote>
-<p>Make file and directory names lowercase. Use hyphens, not underscores, to separate words—for example, query-data.html. Use only standard ASCII alphanumeric characters in file and directory names.
-Don't use generic page names such as document1.html.</p>
-</blockquote>
-<p><a href="https://peps.python.org/pep-0008/#package-and-module-names">PEP8</a> defines a standard for how to name packages and modules:</p>
-<blockquote>
-<p>Modules should have short, all-lowercase names. Underscores can be used in the module name if it improves readability. Python packages should also have short, all-lowercase names, although the use of underscores is discouraged.</p>
-</blockquote>
-<p>This <a href="https://medium.com/@maddendan/hyphens-vs-underscores-in-file-names-295025782912">Medium Post</a> suggests using both hyphens and underscores to split "entities" in file names.</p>
-<p>But now, what to do?</p>
-<p>My solution to choosing one pattern was to search how real python projects are built.
-Just to show fill examples, the repositories <a href="https://github.com/python/miss-islington">miss-islington</a>, <a href="https://github.com/corydolphin/flask-cors">flask-cors</a>, and <a href="https://github.com/frictionlessdata/frictionless-ckan-mapper">frictionless-ckan-mapper</a> share the same pattern suggested in <a href="https://stackoverflow.com/a/59896341/11755155">this StackOverflow post</a>:</p>
-<ul>
-<li>All lowercase.</li>
-<li>The repository should use the same name as the package, except that the repository substitutes hyphens for underscores.</li>
-<li>Only standard ASCII alphanumeric characters in file and directory names.</li>
-</ul>
-<p>The suggested structure is shown below:</p>
-<pre><code>repository-name/
-├── repository_name
-│   ├── __init__.py
-│   ├── __main__.py
-├── README.md
+</p>The function sample provided here will use <a href="https://github.com/prasmussen/chrome-cli">google-chrome CLI</a> and we’re assuming that you are using bash as your shell (if you're using zsh you could use the <code>zshrc</code> file).
+Head to the terminal and open <code>.bash_profile</code> (for this walkthrough we’ll use nano to accomplish this task since it’s simple):</p>
+<pre><code>nano ~/.bash_profile
 </code></pre>
-<p>Next steps? It's time to fully implement the convention in my <a href="https://github.com/gabrielbdornas/python-project-template">Python Project Template</a>, both in documentation and testing to ensure that it'll be applied.</p>
-<h2>References</h2>
-<ul>
-<li>
-<p><a href="https://github.com/dados-mg/issues/issues/57">DTA convention discussion</a></p>
-</li>
-<li>
-<p><a href="https://stackoverflow.com/questions/52827722/folder-naming-convention-for-python-projects">StackOverflow - Folder naming convention for python projects</a></p>
-</li>
-</ul>
+<p>Copy and paste the following syntax at the end of your bash_profile on a new line:</p>
+<pre><code>function chrome() { google-chrome "? $*" ; }
+</code></pre>
+<p>Now hit Control+X and save the changes.
+Now you can initiate a Google search through Chrome directly from the command line, all you need to do is type “chrome [phrase]” and a new google search will launch in the Chrome browser.
+For example, to search google for “braicode” you would just type the following:</p>
+<pre><code>chrome braicode
+</code></pre>
+<p><img src="https://imgur.com/bE91UhL.png" alt="image_braicode_search"></p>
+<p>For phrases with multiple search terms just type all without space:</p>
+<pre><code>chrome github gabrielbdornas
+</code></pre>
+<p><img src="https://imgur.com/bul2ko7.png" alt="image_gabrielbdornas_github_search"></p>
+<p>Each new search of Google will summon a new Chrome browser window.</p>
+<h1>BONUS TIP - Access a specific GitHub repo using the terminal</h1>
+<p>
+I use <a href="https://github.com/">GitHub</a> wheter for repos in my account or another organizations.
+To automate this I used the same principle and created a <code>github</code> function:</p>
+<pre><code>function github() { google-chrome https://github.com/$1/$2 ; }
+</code></pre>
+<p>Now open an repo using:</p>
+<pre><code>github gabrielbdornas python-project-template
+</code></pre>
+<p><img src="https://imgur.com/FNkQdUD.png" alt="image_github_function"></p>
+<p>Moving away from queries, one could also use a variation of this trick to open your favorite website directly from the command line.</p>
+<h1>References</h1>
 
 <div id="livemark-signs">
   <div>
         <div class="next">
-      <a href="2022-07-04-github-pages-custom-domain-configuration.html">
-        GitHub Pages Custom Domain Configuration »
+      <a href="2022-08-17-deletando-lfs-conta-github.html">
+        Move GitHub issues between two repos »
       </a>
     </div>
             <div class="prev">
-      <a href="2022-09-21-special-characters-in-proxy-environment-variable.html">
-        « Special characters in proxy environment variable and URLs
+      <a href="2022-06-21-portugues-vida-profissional.html">
+        « Língua Portuguesa e Vida Profissional
       </a>
     </div>
       </div>
